@@ -12,11 +12,15 @@ Next to create datasets for training a P(S|T) model, run swap.py which takes 1 a
 
 Outputs a file named [FILENAME].st
 
-To train, you have to point ParlAI to those files you want.
+To train, you have to point ParlAI to those files you want. Then run your favorite train settings.
+python examples/train_model.py -t opensubtitles --nbest -m transformer/generator -mf [MODEL] ...
 
 For decoding, use the included torch_generator_agent.py file. This will create a file named nbest.txt
 
 First run eval on the P(T|S) model to get an nbest list for each entry.
+In my case it was:
+python examples/eval_model.py -t personachat --nbest -m transformer/generator -mf [MODEL]
+
 Next run makebi.py to tie the nbest list of targets to source responses into a file named newbi.txt
 
 Next run eval on newbi.txt using the P(S|T) model which will make a file named output.txt. This file contains each line scored by the model.
