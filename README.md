@@ -27,5 +27,7 @@ Next run eval on newbi.txt using the P(S|T) model which will make a file named o
 
 Finally run getscores.py to get a final output with just the new best result.
 
+Mturk code in model_evaluator folder.
+
 Model Problems:
 This model didn't really learn anything so it just spits out garbage and reranking has no effect. Probably more train time is needed.
