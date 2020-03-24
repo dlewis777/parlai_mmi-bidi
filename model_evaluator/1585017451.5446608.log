@@ -1,0 +1,6 @@
+22:37:31,562 git.cmd DEBUG Popen(['git', 'rev-parse', 'HEAD'], cwd=/export/a14/dlewis/ParlAI, universal_newlines=False, shell=None, istream=None)
+22:37:31,578 git.cmd DEBUG Popen(['git', 'rev-parse', 'HEAD'], cwd=/export/a14/dlewis/ParlAI/parlai_internal, universal_newlines=False, shell=None, istream=None)
+22:37:34,745 mturk INFO 
+You are going to allow workers from Amazon Mechanical Turk to be an agent in ParlAI.
+During this process, Internet connection is required, and you should turn off your computer's auto-sleep feature.
+22:37:34,746 mturk INFO Enough HITs will be launched over time up to a max of 1.5 times the amount requested until the desired number of conversations start.

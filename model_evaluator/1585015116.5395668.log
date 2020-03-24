@@ -1,0 +1,886 @@
+21:58:36,572 git.cmd DEBUG Popen(['git', 'rev-parse', 'HEAD'], cwd=/export/a14/dlewis/ParlAI, universal_newlines=False, shell=None, istream=None)
+21:58:36,588 git.cmd DEBUG Popen(['git', 'rev-parse', 'HEAD'], cwd=/export/a14/dlewis/ParlAI/parlai_internal, universal_newlines=False, shell=None, istream=None)
+21:58:36,603 mturk INFO 
+You are going to allow workers from Amazon Mechanical Turk to be an agent in ParlAI.
+During this process, Internet connection is required, and you should turn off your computer's auto-sleep feature.
+21:58:36,603 mturk INFO Enough HITs will be launched over time up to a max of 1.5 times the amount requested until the desired number of conversations start.
+21:58:40,170 botocore.hooks DEBUG Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+21:58:40,181 botocore.hooks DEBUG Changing event name from before-call.apigateway to before-call.api-gateway
+21:58:40,182 botocore.hooks DEBUG Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+21:58:40,188 botocore.hooks DEBUG Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+21:58:40,188 botocore.hooks DEBUG Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+21:58:40,190 botocore.hooks DEBUG Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+21:58:40,192 botocore.hooks DEBUG Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+21:58:40,199 botocore.hooks DEBUG Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+21:58:40,200 botocore.hooks DEBUG Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+21:58:40,200 botocore.hooks DEBUG Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+21:58:40,200 botocore.hooks DEBUG Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+21:58:40,201 botocore.session DEBUG Setting config variable for profile to 'parlai_mturk'
+21:58:40,208 botocore.hooks DEBUG Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+21:58:40,219 botocore.hooks DEBUG Changing event name from before-call.apigateway to before-call.api-gateway
+21:58:40,220 botocore.hooks DEBUG Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+21:58:40,225 botocore.hooks DEBUG Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+21:58:40,226 botocore.hooks DEBUG Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+21:58:40,227 botocore.hooks DEBUG Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+21:58:40,229 botocore.hooks DEBUG Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+21:58:40,237 botocore.hooks DEBUG Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+21:58:40,237 botocore.hooks DEBUG Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+21:58:40,237 botocore.hooks DEBUG Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+21:58:40,238 botocore.hooks DEBUG Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+21:58:40,245 botocore.credentials DEBUG Looking for credentials via: env
+21:58:40,247 botocore.credentials DEBUG Looking for credentials via: assume-role
+21:58:40,247 botocore.credentials DEBUG Looking for credentials via: assume-role-with-web-identity
+21:58:40,248 botocore.credentials DEBUG Looking for credentials via: shared-credentials-file
+21:58:40,251 botocore.credentials INFO Found credentials in shared credentials file: ~/.aws/credentials
+21:58:40,252 botocore.loaders DEBUG Loading JSON file: /home/dlewis/anaconda3/envs/p36/lib/python3.6/site-packages/botocore/data/endpoints.json
+21:58:40,265 botocore.hooks DEBUG Event choose-service-name: calling handler <function handle_service_name_alias at 0x7f180b58c950>
+21:58:40,533 botocore.loaders DEBUG Loading JSON file: /home/dlewis/anaconda3/envs/p36/lib/python3.6/site-packages/botocore/data/mturk/2017-01-17/service-2.json
+21:58:40,541 botocore.hooks DEBUG Event creating-client-class.mturk: calling handler <function add_generate_presigned_url at 0x7f180b5fa1e0>
+21:58:40,542 botocore.args DEBUG The s3 config key is not a dictionary type, ignoring its value of: None
+21:58:40,549 botocore.endpoint DEBUG Setting mturk-requester timeout as (60, 60)
+21:58:40,550 botocore.loaders DEBUG Loading JSON file: /home/dlewis/anaconda3/envs/p36/lib/python3.6/site-packages/botocore/data/_retry.json
+21:58:40,551 botocore.client DEBUG Registering retry handlers for service: mturk
+21:58:40,553 botocore.hooks DEBUG Event before-parameter-build.mturk.GetAccountBalance: calling handler <function generate_idempotent_uuid at 0x7f180b5a6d90>
+21:58:40,553 botocore.hooks DEBUG Event before-call.mturk.GetAccountBalance: calling handler <function inject_api_version_header_if_needed at 0x7f180b5aa7b8>
+21:58:40,553 botocore.endpoint DEBUG Making request for OperationModel(name=GetAccountBalance) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'X-Amz-Target': 'MTurkRequesterServiceV20170117.GetAccountBalance', 'Content-Type': 'application/x-amz-json-1.1', 'User-Agent': 'Boto3/1.9.247 Python/3.6.1 Linux/4.9.0-11-amd64 Botocore/1.12.247'}, 'body': b'{}', 'url': 'https://mturk-requester-sandbox.us-east-1.amazonaws.com/', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x7f180ac5d5c0>, 'has_streaming_input': False, 'auth_type': None}}
+21:58:40,554 botocore.hooks DEBUG Event request-created.mturk.GetAccountBalance: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x7f180ac5d550>>
+21:58:40,554 botocore.hooks DEBUG Event choose-signer.mturk.GetAccountBalance: calling handler <function set_operation_specific_signer at 0x7f180b5a6c80>
+21:58:40,556 botocore.auth DEBUG Calculating signature using v4 auth.
+21:58:40,556 botocore.auth DEBUG CanonicalRequest:
+POST
+/
+
+content-type:application/x-amz-json-1.1
+host:mturk-requester-sandbox.us-east-1.amazonaws.com
+x-amz-date:20200324T015840Z
+x-amz-target:MTurkRequesterServiceV20170117.GetAccountBalance
+
+content-type;host;x-amz-date;x-amz-target
+44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a
+21:58:40,556 botocore.auth DEBUG StringToSign:
+AWS4-HMAC-SHA256
+20200324T015840Z
+20200324/us-east-1/mturk-requester/aws4_request
+15483301d3193c3c7c575aaf5f3594ff04660cc010befea3ba74b0e21a55b87c
+21:58:40,557 botocore.auth DEBUG Signature:
+f810d3455d1d786d707ab1598fef57d2513c13bf2bc01fd79be6e451781918f5
+21:58:40,557 botocore.endpoint DEBUG Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://mturk-requester-sandbox.us-east-1.amazonaws.com/, headers={'X-Amz-Target': b'MTurkRequesterServiceV20170117.GetAccountBalance', 'Content-Type': b'application/x-amz-json-1.1', 'User-Agent': b'Boto3/1.9.247 Python/3.6.1 Linux/4.9.0-11-amd64 Botocore/1.12.247', 'X-Amz-Date': b'20200324T015840Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAS3M5Z7OFELXDLS7S/20200324/us-east-1/mturk-requester/aws4_request, SignedHeaders=content-type;host;x-amz-date;x-amz-target, Signature=f810d3455d1d786d707ab1598fef57d2513c13bf2bc01fd79be6e451781918f5', 'Content-Length': '2'}>
+21:58:40,559 urllib3.util.retry DEBUG Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+21:58:40,559 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): mturk-requester-sandbox.us-east-1.amazonaws.com
+21:58:40,676 urllib3.connectionpool DEBUG https://mturk-requester-sandbox.us-east-1.amazonaws.com:443 "POST / HTTP/1.1" 200 31
+21:58:40,677 botocore.parsers DEBUG Response headers: {'x-amzn-RequestId': 'aaacb050-454d-4a37-9518-4b327655fcdb', 'Content-Type': 'application/x-amz-json-1.1', 'Content-Length': '31', 'Date': 'Tue, 24 Mar 2020 01:58:39 GMT'}
+21:58:40,677 botocore.parsers DEBUG Response body:
+b'{"AvailableBalance":"10000.00"}'
+21:58:40,678 botocore.hooks DEBUG Event needs-retry.mturk.GetAccountBalance: calling handler <botocore.retryhandler.RetryHandler object at 0x7f180ac5da90>
+21:58:40,679 botocore.retryhandler DEBUG No retry needed.
+21:58:40,679 mturk INFO Querying the parlai website for possible notices...
+21:58:40,688 urllib3.connectionpool DEBUG Starting new HTTP connection (1): mturk.parl.ai
+21:58:41,450 urllib3.connectionpool DEBUG http://mturk.parl.ai:80 "POST /mturk/mturk_notice/sandbox HTTP/1.1" 200 None
+21:58:41,453 mturk INFO Setting up MTurk server...
+21:58:41,472 sh.command INFO <Command '/bin/rm -rf /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator'>: starting process
+21:58:41,480 sh.command.process DEBUG <Command '/bin/rm -rf /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator'>.<Process 13821 [b'/bin/rm', b'-rf', b'/export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator']>: started process
+21:58:41,483 sh.command INFO <Command '/bin/rm -rf /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator', pid 13821>: process started
+21:58:41,483 sh.command.process DEBUG <Command '/bin/rm -rf /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator'>.<Process 13821 [b'/bin/rm', b'-rf', b'/export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator']>: acquiring wait lock to wait for completion
+21:58:41,483 sh.command.process DEBUG <Command '/bin/rm -rf /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator'>.<Process 13821 [b'/bin/rm', b'-rf', b'/export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator']>: got wait lock
+21:58:41,483 sh.command.process DEBUG <Command '/bin/rm -rf /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator'>.<Process 13821 [b'/bin/rm', b'-rf', b'/export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator']>: exit code not set, waiting on pid
+21:58:41,487 sh.command.process DEBUG <Command '/bin/rm -rf /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator'>.<Process 13821 [b'/bin/rm', b'-rf', b'/export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator']>: <sh.StreamReader object at 0x7f180a59f7f0> ready to be read from
+21:58:41,487 sh.command.process.streamreader DEBUG <Command '/bin/rm -rf /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator'>.<Process 13821 [b'/bin/rm', b'-rf', b'/export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator']>.stdout: got errno 5, done reading
+21:58:41,487 sh.command.process DEBUG <Command '/bin/rm -rf /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator'>.<Process 13821 [b'/bin/rm', b'-rf', b'/export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator']>: <sh.StreamReader object at 0x7f180a59f940> ready to be read from
+21:58:41,487 sh.streamreader DEBUG got no chunk, done reading
+21:58:41,488 sh.stream_bufferer DEBUG acquiring buffering lock for flushing buffer
+21:58:41,488 sh.stream_bufferer DEBUG got buffering lock for flushing buffer
+21:58:41,489 sh.stream_bufferer DEBUG released buffering lock for flushing buffer
+21:58:41,489 sh.command.process.streamreader DEBUG <Command '/bin/rm -rf /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator'>.<Process 13821 [b'/bin/rm', b'-rf', b'/export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator']>.stdout: got chunk size 0 to flush: b''
+21:58:41,489 sh.stream_bufferer DEBUG acquiring buffering lock for flushing buffer
+21:58:41,489 sh.stream_bufferer DEBUG got buffering lock for flushing buffer
+21:58:41,489 sh.stream_bufferer DEBUG released buffering lock for flushing buffer
+21:58:41,489 sh.streamreader DEBUG got chunk size 0 to flush: b''
+21:58:41,490 sh.command INFO <Command '/bin/rm -rf /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator', pid 13821>: process completed
+21:58:41,493 sh.command INFO <Command '/bin/mv /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/html /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/task'>: starting process
+21:58:41,500 sh.command.process DEBUG <Command '/bin/mv /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/html /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/task'>.<Process 13825 [b'/bin/mv', b'/export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/html', b'/export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/task']>: started process
+21:58:41,503 sh.command INFO <Command '/bin/mv /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/html /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/task', pid 13825>: process started
+21:58:41,503 sh.command.process DEBUG <Command '/bin/mv /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/html /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/task'>.<Process 13825 [b'/bin/mv', b'/export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/html', b'/export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/task']>: acquiring wait lock to wait for completion
+21:58:41,503 sh.command.process DEBUG <Command '/bin/mv /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/html /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/task'>.<Process 13825 [b'/bin/mv', b'/export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/html', b'/export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/task']>: got wait lock
+21:58:41,503 sh.command.process DEBUG <Command '/bin/mv /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/html /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/task'>.<Process 13825 [b'/bin/mv', b'/export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/html', b'/export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/task']>: exit code not set, waiting on pid
+21:58:41,508 sh.command.process DEBUG <Command '/bin/mv /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/html /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/task'>.<Process 13825 [b'/bin/mv', b'/export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/html', b'/export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/task']>: <sh.StreamReader object at 0x7f180a59f630> ready to be read from
+21:58:41,508 sh.command.process.streamreader DEBUG <Command '/bin/mv /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/html /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/task'>.<Process 13825 [b'/bin/mv', b'/export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/html', b'/export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/task']>.stdout: got errno 5, done reading
+21:58:41,508 sh.command.process DEBUG <Command '/bin/mv /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/html /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/task'>.<Process 13825 [b'/bin/mv', b'/export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/html', b'/export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/task']>: <sh.StreamReader object at 0x7f180a59fe10> ready to be read from
+21:58:41,508 sh.streamreader DEBUG got no chunk, done reading
+21:58:41,509 sh.stream_bufferer DEBUG acquiring buffering lock for flushing buffer
+21:58:41,509 sh.stream_bufferer DEBUG got buffering lock for flushing buffer
+21:58:41,509 sh.stream_bufferer DEBUG released buffering lock for flushing buffer
+21:58:41,509 sh.command.process.streamreader DEBUG <Command '/bin/mv /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/html /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/task'>.<Process 13825 [b'/bin/mv', b'/export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/html', b'/export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/task']>.stdout: got chunk size 0 to flush: b''
+21:58:41,510 sh.stream_bufferer DEBUG acquiring buffering lock for flushing buffer
+21:58:41,510 sh.stream_bufferer DEBUG got buffering lock for flushing buffer
+21:58:41,510 sh.stream_bufferer DEBUG released buffering lock for flushing buffer
+21:58:41,510 sh.streamreader DEBUG got chunk size 0 to flush: b''
+21:58:41,510 sh.command INFO <Command '/bin/mv /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/html /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/task', pid 13825>: process completed
+21:58:41,511 sh.command INFO <Command '/bin/mv /export/a14/dlewis/ParlAI/parlai/mturk/tmp/hit_config.json /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/task'>: starting process
+21:58:41,519 sh.command.process DEBUG <Command '/bin/mv /export/a14/dlewis/ParlAI/parlai/mturk/tmp/hit_config.json /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/task'>.<Process 13829 [b'/bin/mv', b'/export/a14/dlewis/ParlAI/parlai/mturk/tmp/hit_config.json', b'/export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/task']>: started process
+21:58:41,521 sh.command INFO <Command '/bin/mv /export/a14/dlewis/ParlAI/parlai/mturk/tmp/hit_config.json /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/task', pid 13829>: process started
+21:58:41,521 sh.command.process DEBUG <Command '/bin/mv /export/a14/dlewis/ParlAI/parlai/mturk/tmp/hit_config.json /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/task'>.<Process 13829 [b'/bin/mv', b'/export/a14/dlewis/ParlAI/parlai/mturk/tmp/hit_config.json', b'/export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/task']>: acquiring wait lock to wait for completion
+21:58:41,521 sh.command.process DEBUG <Command '/bin/mv /export/a14/dlewis/ParlAI/parlai/mturk/tmp/hit_config.json /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/task'>.<Process 13829 [b'/bin/mv', b'/export/a14/dlewis/ParlAI/parlai/mturk/tmp/hit_config.json', b'/export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/task']>: got wait lock
+21:58:41,522 sh.command.process DEBUG <Command '/bin/mv /export/a14/dlewis/ParlAI/parlai/mturk/tmp/hit_config.json /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/task'>.<Process 13829 [b'/bin/mv', b'/export/a14/dlewis/ParlAI/parlai/mturk/tmp/hit_config.json', b'/export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/task']>: exit code not set, waiting on pid
+21:58:41,525 sh.command.process DEBUG <Command '/bin/mv /export/a14/dlewis/ParlAI/parlai/mturk/tmp/hit_config.json /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/task'>.<Process 13829 [b'/bin/mv', b'/export/a14/dlewis/ParlAI/parlai/mturk/tmp/hit_config.json', b'/export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/task']>: <sh.StreamReader object at 0x7f180a5b7588> ready to be read from
+21:58:41,526 sh.command.process.streamreader DEBUG <Command '/bin/mv /export/a14/dlewis/ParlAI/parlai/mturk/tmp/hit_config.json /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/task'>.<Process 13829 [b'/bin/mv', b'/export/a14/dlewis/ParlAI/parlai/mturk/tmp/hit_config.json', b'/export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/task']>.stdout: got errno 5, done reading
+21:58:41,526 sh.command.process DEBUG <Command '/bin/mv /export/a14/dlewis/ParlAI/parlai/mturk/tmp/hit_config.json /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/task'>.<Process 13829 [b'/bin/mv', b'/export/a14/dlewis/ParlAI/parlai/mturk/tmp/hit_config.json', b'/export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/task']>: <sh.StreamReader object at 0x7f180a5b7630> ready to be read from
+21:58:41,526 sh.streamreader DEBUG got no chunk, done reading
+21:58:41,526 sh.stream_bufferer DEBUG acquiring buffering lock for flushing buffer
+21:58:41,526 sh.stream_bufferer DEBUG got buffering lock for flushing buffer
+21:58:41,526 sh.stream_bufferer DEBUG released buffering lock for flushing buffer
+21:58:41,527 sh.command.process.streamreader DEBUG <Command '/bin/mv /export/a14/dlewis/ParlAI/parlai/mturk/tmp/hit_config.json /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/task'>.<Process 13829 [b'/bin/mv', b'/export/a14/dlewis/ParlAI/parlai/mturk/tmp/hit_config.json', b'/export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/task']>.stdout: got chunk size 0 to flush: b''
+21:58:41,527 sh.stream_bufferer DEBUG acquiring buffering lock for flushing buffer
+21:58:41,527 sh.stream_bufferer DEBUG got buffering lock for flushing buffer
+21:58:41,527 sh.stream_bufferer DEBUG released buffering lock for flushing buffer
+21:58:41,527 sh.streamreader DEBUG got chunk size 0 to flush: b''
+21:58:41,528 sh.command INFO <Command '/bin/mv /export/a14/dlewis/ParlAI/parlai/mturk/tmp/hit_config.json /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator/task', pid 13829>: process completed
+21:58:41,529 sh.command INFO <Command '/usr/bin/git init'>: starting process
+21:58:41,536 sh.command.process DEBUG <Command '/usr/bin/git init'>.<Process 13833 [b'/usr/bin/git', b'init']>: started process
+21:58:41,538 sh.command INFO <Command '/usr/bin/git init', pid 13833>: process started
+21:58:41,538 sh.command.process DEBUG <Command '/usr/bin/git init'>.<Process 13833 [b'/usr/bin/git', b'init']>: acquiring wait lock to wait for completion
+21:58:41,538 sh.command.process DEBUG <Command '/usr/bin/git init'>.<Process 13833 [b'/usr/bin/git', b'init']>: got wait lock
+21:58:41,539 sh.command.process DEBUG <Command '/usr/bin/git init'>.<Process 13833 [b'/usr/bin/git', b'init']>: exit code not set, waiting on pid
+21:58:41,555 sh.command.process DEBUG <Command '/usr/bin/git init'>.<Process 13833 [b'/usr/bin/git', b'init']>: <sh.StreamReader object at 0x7f180a5b7eb8> ready to be read from
+21:58:41,556 sh.command.process.streamreader DEBUG <Command '/usr/bin/git init'>.<Process 13833 [b'/usr/bin/git', b'init']>.stdout: got chunk size 123: b'Initialized empty Git reposito'
+21:58:41,556 sh.stream_bufferer DEBUG acquiring buffering lock to process chunk (buffering: 1)
+21:58:41,556 sh.stream_bufferer DEBUG got buffering lock to process chunk (buffering: 1)
+21:58:41,556 sh.stream_bufferer DEBUG released buffering lock for processing chunk (buffering: 1)
+21:58:41,556 sh.command.process.streamreader DEBUG <Command '/usr/bin/git init'>.<Process 13833 [b'/usr/bin/git', b'init']>.stdout: putting chunk onto pipe: b'Initialized empty Git reposito'
+21:58:41,556 sh.command.process DEBUG <Command '/usr/bin/git init'>.<Process 13833 [b'/usr/bin/git', b'init']>: <sh.StreamReader object at 0x7f180a5b7eb8> ready to be read from
+21:58:41,557 sh.command.process.streamreader DEBUG <Command '/usr/bin/git init'>.<Process 13833 [b'/usr/bin/git', b'init']>.stdout: got errno 5, done reading
+21:58:41,557 sh.command.process DEBUG <Command '/usr/bin/git init'>.<Process 13833 [b'/usr/bin/git', b'init']>: <sh.StreamReader object at 0x7f180a5b7f60> ready to be read from
+21:58:41,557 sh.streamreader DEBUG got no chunk, done reading
+21:58:41,557 sh.stream_bufferer DEBUG acquiring buffering lock for flushing buffer
+21:58:41,557 sh.stream_bufferer DEBUG got buffering lock for flushing buffer
+21:58:41,557 sh.stream_bufferer DEBUG released buffering lock for flushing buffer
+21:58:41,557 sh.command.process.streamreader DEBUG <Command '/usr/bin/git init'>.<Process 13833 [b'/usr/bin/git', b'init']>.stdout: got chunk size 0 to flush: b''
+21:58:41,558 sh.stream_bufferer DEBUG acquiring buffering lock for flushing buffer
+21:58:41,558 sh.stream_bufferer DEBUG got buffering lock for flushing buffer
+21:58:41,558 sh.stream_bufferer DEBUG released buffering lock for flushing buffer
+21:58:41,558 sh.streamreader DEBUG got chunk size 0 to flush: b''
+21:58:41,558 sh.command INFO <Command '/usr/bin/git init', pid 13833>: process completed
+21:58:44,153 sh.command INFO <Command '/usr/bin/git add -A'>: starting process
+21:58:44,162 sh.command.process DEBUG <Command '/usr/bin/git add -A'>.<Process 13892 [b'/usr/bin/git', b'add', b'-A']>: started process
+21:58:44,165 sh.command INFO <Command '/usr/bin/git add -A', pid 13892>: process started
+21:58:44,165 sh.command.process DEBUG <Command '/usr/bin/git add -A'>.<Process 13892 [b'/usr/bin/git', b'add', b'-A']>: acquiring wait lock to wait for completion
+21:58:44,165 sh.command.process DEBUG <Command '/usr/bin/git add -A'>.<Process 13892 [b'/usr/bin/git', b'add', b'-A']>: got wait lock
+21:58:44,165 sh.command.process DEBUG <Command '/usr/bin/git add -A'>.<Process 13892 [b'/usr/bin/git', b'add', b'-A']>: exit code not set, waiting on pid
+21:58:44,174 sh.command.process DEBUG <Command '/usr/bin/git add -A'>.<Process 13892 [b'/usr/bin/git', b'add', b'-A']>: <sh.StreamReader object at 0x7f180a5bf898> ready to be read from
+21:58:44,174 sh.command.process.streamreader DEBUG <Command '/usr/bin/git add -A'>.<Process 13892 [b'/usr/bin/git', b'add', b'-A']>.stdout: got errno 5, done reading
+21:58:44,174 sh.command.process DEBUG <Command '/usr/bin/git add -A'>.<Process 13892 [b'/usr/bin/git', b'add', b'-A']>: <sh.StreamReader object at 0x7f180a5bf940> ready to be read from
+21:58:44,174 sh.streamreader DEBUG got no chunk, done reading
+21:58:44,175 sh.stream_bufferer DEBUG acquiring buffering lock for flushing buffer
+21:58:44,175 sh.stream_bufferer DEBUG got buffering lock for flushing buffer
+21:58:44,175 sh.stream_bufferer DEBUG released buffering lock for flushing buffer
+21:58:44,175 sh.command.process.streamreader DEBUG <Command '/usr/bin/git add -A'>.<Process 13892 [b'/usr/bin/git', b'add', b'-A']>.stdout: got chunk size 0 to flush: b''
+21:58:44,176 sh.stream_bufferer DEBUG acquiring buffering lock for flushing buffer
+21:58:44,176 sh.stream_bufferer DEBUG got buffering lock for flushing buffer
+21:58:44,176 sh.stream_bufferer DEBUG released buffering lock for flushing buffer
+21:58:44,176 sh.streamreader DEBUG got chunk size 0 to flush: b''
+21:58:44,176 sh.command INFO <Command '/usr/bin/git add -A', pid 13892>: process completed
+21:58:44,177 sh.command INFO <Command '/usr/bin/git commit -m app'>: starting process
+21:58:44,185 sh.command.process DEBUG <Command '/usr/bin/git commit -m app'>.<Process 13896 [b'/usr/bin/git', b'commit', b'-m', b'app']>: started process
+21:58:44,187 sh.command INFO <Command '/usr/bin/git commit -m app', pid 13896>: process started
+21:58:44,187 sh.command.process DEBUG <Command '/usr/bin/git commit -m app'>.<Process 13896 [b'/usr/bin/git', b'commit', b'-m', b'app']>: acquiring wait lock to wait for completion
+21:58:44,188 sh.command.process DEBUG <Command '/usr/bin/git commit -m app'>.<Process 13896 [b'/usr/bin/git', b'commit', b'-m', b'app']>: got wait lock
+21:58:44,188 sh.command.process DEBUG <Command '/usr/bin/git commit -m app'>.<Process 13896 [b'/usr/bin/git', b'commit', b'-m', b'app']>: exit code not set, waiting on pid
+21:58:44,204 sh.command.process DEBUG <Command '/usr/bin/git commit -m app'>.<Process 13896 [b'/usr/bin/git', b'commit', b'-m', b'app']>: <sh.StreamReader object at 0x7f180a5b7898> ready to be read from
+21:58:44,205 sh.command.process.streamreader DEBUG <Command '/usr/bin/git commit -m app'>.<Process 13896 [b'/usr/bin/git', b'commit', b'-m', b'app']>.stdout: got chunk size 520: b'[master (root-commit) 705b8b4]'
+21:58:44,205 sh.stream_bufferer DEBUG acquiring buffering lock to process chunk (buffering: 1)
+21:58:44,205 sh.stream_bufferer DEBUG got buffering lock to process chunk (buffering: 1)
+21:58:44,205 sh.stream_bufferer DEBUG released buffering lock for processing chunk (buffering: 1)
+21:58:44,205 sh.command.process.streamreader DEBUG <Command '/usr/bin/git commit -m app'>.<Process 13896 [b'/usr/bin/git', b'commit', b'-m', b'app']>.stdout: putting chunk onto pipe: b'[master (root-commit) 705b8b4]'
+21:58:44,205 sh.command.process.streamreader DEBUG <Command '/usr/bin/git commit -m app'>.<Process 13896 [b'/usr/bin/git', b'commit', b'-m', b'app']>.stdout: putting chunk onto pipe: b' Committer: Dylan Lewis <dlewi'
+21:58:44,206 sh.command.process.streamreader DEBUG <Command '/usr/bin/git commit -m app'>.<Process 13896 [b'/usr/bin/git', b'commit', b'-m', b'app']>.stdout: putting chunk onto pipe: b'Your name and email address we'
+21:58:44,206 sh.command.process.streamreader DEBUG <Command '/usr/bin/git commit -m app'>.<Process 13896 [b'/usr/bin/git', b'commit', b'-m', b'app']>.stdout: putting chunk onto pipe: b'on your username and hostname.'
+21:58:44,206 sh.command.process.streamreader DEBUG <Command '/usr/bin/git commit -m app'>.<Process 13896 [b'/usr/bin/git', b'commit', b'-m', b'app']>.stdout: putting chunk onto pipe: b'You can suppress this message '
+21:58:44,206 sh.command.process.streamreader DEBUG <Command '/usr/bin/git commit -m app'>.<Process 13896 [b'/usr/bin/git', b'commit', b'-m', b'app']>.stdout: putting chunk onto pipe: b'following command and follow t'
+21:58:44,207 sh.command.process.streamreader DEBUG <Command '/usr/bin/git commit -m app'>.<Process 13896 [b'/usr/bin/git', b'commit', b'-m', b'app']>.stdout: putting chunk onto pipe: b'your configuration file:\n'
+21:58:44,207 sh.command.process.streamreader DEBUG <Command '/usr/bin/git commit -m app'>.<Process 13896 [b'/usr/bin/git', b'commit', b'-m', b'app']>.stdout: putting chunk onto pipe: b'\n'
+21:58:44,207 sh.command.process.streamreader DEBUG <Command '/usr/bin/git commit -m app'>.<Process 13896 [b'/usr/bin/git', b'commit', b'-m', b'app']>.stdout: putting chunk onto pipe: b'    git config --global --edit'
+21:58:44,207 sh.command.process.streamreader DEBUG <Command '/usr/bin/git commit -m app'>.<Process 13896 [b'/usr/bin/git', b'commit', b'-m', b'app']>.stdout: putting chunk onto pipe: b'\n'
+21:58:44,207 sh.command.process.streamreader DEBUG <Command '/usr/bin/git commit -m app'>.<Process 13896 [b'/usr/bin/git', b'commit', b'-m', b'app']>.stdout: putting chunk onto pipe: b'After doing this, you may fix '
+21:58:44,207 sh.command.process.streamreader DEBUG <Command '/usr/bin/git commit -m app'>.<Process 13896 [b'/usr/bin/git', b'commit', b'-m', b'app']>.stdout: putting chunk onto pipe: b'\n'
+21:58:44,207 sh.command.process.streamreader DEBUG <Command '/usr/bin/git commit -m app'>.<Process 13896 [b'/usr/bin/git', b'commit', b'-m', b'app']>.stdout: putting chunk onto pipe: b'    git commit --amend --reset'
+21:58:44,207 sh.command.process.streamreader DEBUG <Command '/usr/bin/git commit -m app'>.<Process 13896 [b'/usr/bin/git', b'commit', b'-m', b'app']>.stdout: putting chunk onto pipe: b'\n'
+21:58:44,208 sh.command.process DEBUG <Command '/usr/bin/git commit -m app'>.<Process 13896 [b'/usr/bin/git', b'commit', b'-m', b'app']>: <sh.StreamReader object at 0x7f180a5b7898> ready to be read from
+21:58:44,208 sh.command.process.streamreader DEBUG <Command '/usr/bin/git commit -m app'>.<Process 13896 [b'/usr/bin/git', b'commit', b'-m', b'app']>.stdout: got chunk size 291: b' 7 files changed, 1323 inserti'
+21:58:44,208 sh.stream_bufferer DEBUG acquiring buffering lock to process chunk (buffering: 1)
+21:58:44,208 sh.stream_bufferer DEBUG got buffering lock to process chunk (buffering: 1)
+21:58:44,208 sh.stream_bufferer DEBUG released buffering lock for processing chunk (buffering: 1)
+21:58:44,208 sh.command.process.streamreader DEBUG <Command '/usr/bin/git commit -m app'>.<Process 13896 [b'/usr/bin/git', b'commit', b'-m', b'app']>.stdout: putting chunk onto pipe: b' 7 files changed, 1323 inserti'
+21:58:44,208 sh.command.process.streamreader DEBUG <Command '/usr/bin/git commit -m app'>.<Process 13896 [b'/usr/bin/git', b'commit', b'-m', b'app']>.stdout: putting chunk onto pipe: b' create mode 100644 __init__.p'
+21:58:44,208 sh.command.process.streamreader DEBUG <Command '/usr/bin/git commit -m app'>.<Process 13896 [b'/usr/bin/git', b'commit', b'-m', b'app']>.stdout: putting chunk onto pipe: b' create mode 100644 package.js'
+21:58:44,209 sh.command.process.streamreader DEBUG <Command '/usr/bin/git commit -m app'>.<Process 13896 [b'/usr/bin/git', b'commit', b'-m', b'app']>.stdout: putting chunk onto pipe: b' create mode 100644 server.js\n'
+21:58:44,209 sh.command.process.streamreader DEBUG <Command '/usr/bin/git commit -m app'>.<Process 13896 [b'/usr/bin/git', b'commit', b'-m', b'app']>.stdout: putting chunk onto pipe: b' create mode 100644 task/core.'
+21:58:44,209 sh.command.process.streamreader DEBUG <Command '/usr/bin/git commit -m app'>.<Process 13896 [b'/usr/bin/git', b'commit', b'-m', b'app']>.stdout: putting chunk onto pipe: b' create mode 100644 task/cover'
+21:58:44,209 sh.command.process.streamreader DEBUG <Command '/usr/bin/git commit -m app'>.<Process 13896 [b'/usr/bin/git', b'commit', b'-m', b'app']>.stdout: putting chunk onto pipe: b' create mode 100644 task/hit_c'
+21:58:44,209 sh.command.process.streamreader DEBUG <Command '/usr/bin/git commit -m app'>.<Process 13896 [b'/usr/bin/git', b'commit', b'-m', b'app']>.stdout: putting chunk onto pipe: b' create mode 100644 task/mturk'
+21:58:44,209 sh.command.process DEBUG <Command '/usr/bin/git commit -m app'>.<Process 13896 [b'/usr/bin/git', b'commit', b'-m', b'app']>: <sh.StreamReader object at 0x7f180a5b77b8> ready to be read from
+21:58:44,209 sh.streamreader DEBUG got no chunk, done reading
+21:58:44,209 sh.command.process DEBUG <Command '/usr/bin/git commit -m app'>.<Process 13896 [b'/usr/bin/git', b'commit', b'-m', b'app']>: <sh.StreamReader object at 0x7f180a5b7898> ready to be read from
+21:58:44,210 sh.command.process.streamreader DEBUG <Command '/usr/bin/git commit -m app'>.<Process 13896 [b'/usr/bin/git', b'commit', b'-m', b'app']>.stdout: got errno 5, done reading
+21:58:44,210 sh.stream_bufferer DEBUG acquiring buffering lock for flushing buffer
+21:58:44,210 sh.stream_bufferer DEBUG got buffering lock for flushing buffer
+21:58:44,210 sh.stream_bufferer DEBUG released buffering lock for flushing buffer
+21:58:44,210 sh.command.process.streamreader DEBUG <Command '/usr/bin/git commit -m app'>.<Process 13896 [b'/usr/bin/git', b'commit', b'-m', b'app']>.stdout: got chunk size 0 to flush: b''
+21:58:44,210 sh.stream_bufferer DEBUG acquiring buffering lock for flushing buffer
+21:58:44,210 sh.stream_bufferer DEBUG got buffering lock for flushing buffer
+21:58:44,210 sh.stream_bufferer DEBUG released buffering lock for flushing buffer
+21:58:44,211 sh.streamreader DEBUG got chunk size 0 to flush: b''
+21:58:44,211 sh.command INFO <Command '/usr/bin/git commit -m app', pid 13896>: process completed
+21:58:44,212 sh.command INFO <Command '/usr/bin/git push -f heroku master'>: starting process
+21:58:44,219 sh.command.process DEBUG <Command '/usr/bin/git push -f heroku master'>.<Process 13900 [b'/usr/bin/git', b'push', b'-f', b'heroku', b'master']>: started process
+21:58:44,221 sh.command INFO <Command '/usr/bin/git push -f heroku master', pid 13900>: process started
+21:58:44,222 sh.command.process DEBUG <Command '/usr/bin/git push -f heroku master'>.<Process 13900 [b'/usr/bin/git', b'push', b'-f', b'heroku', b'master']>: acquiring wait lock to wait for completion
+21:58:44,222 sh.command.process DEBUG <Command '/usr/bin/git push -f heroku master'>.<Process 13900 [b'/usr/bin/git', b'push', b'-f', b'heroku', b'master']>: got wait lock
+21:58:44,222 sh.command.process DEBUG <Command '/usr/bin/git push -f heroku master'>.<Process 13900 [b'/usr/bin/git', b'push', b'-f', b'heroku', b'master']>: exit code not set, waiting on pid
+21:58:45,525 sh.command.process DEBUG <Command '/usr/bin/git push -f heroku master'>.<Process 13900 [b'/usr/bin/git', b'push', b'-f', b'heroku', b'master']>: <sh.StreamReader object at 0x7f180a59f908> ready to be read from
+21:58:45,526 sh.streamreader DEBUG got chunk size 83: b'remote: Compressing source fil'
+21:58:45,526 sh.stream_bufferer DEBUG acquiring buffering lock to process chunk (buffering: 1)
+21:58:45,526 sh.stream_bufferer DEBUG got buffering lock to process chunk (buffering: 1)
+21:58:45,526 sh.stream_bufferer DEBUG released buffering lock for processing chunk (buffering: 1)
+21:58:47,397 sh.command.process DEBUG <Command '/usr/bin/git push -f heroku master'>.<Process 13900 [b'/usr/bin/git', b'push', b'-f', b'heroku', b'master']>: <sh.StreamReader object at 0x7f180a59f908> ready to be read from
+21:58:47,397 sh.streamreader DEBUG got chunk size 9: b'remote: \n'
+21:58:47,398 sh.stream_bufferer DEBUG acquiring buffering lock to process chunk (buffering: 1)
+21:58:47,398 sh.stream_bufferer DEBUG got buffering lock to process chunk (buffering: 1)
+21:58:47,398 sh.stream_bufferer DEBUG released buffering lock for processing chunk (buffering: 1)
+21:58:47,457 sh.command.process DEBUG <Command '/usr/bin/git push -f heroku master'>.<Process 13900 [b'/usr/bin/git', b'push', b'-f', b'heroku', b'master']>: <sh.StreamReader object at 0x7f180a59f908> ready to be read from
+21:58:47,457 sh.streamreader DEBUG got chunk size 44: b'remote: -----> Node.js app det'
+21:58:47,457 sh.stream_bufferer DEBUG acquiring buffering lock to process chunk (buffering: 1)
+21:58:47,457 sh.stream_bufferer DEBUG got buffering lock to process chunk (buffering: 1)
+21:58:47,457 sh.stream_bufferer DEBUG released buffering lock for processing chunk (buffering: 1)
+21:58:47,537 sh.command.process DEBUG <Command '/usr/bin/git push -f heroku master'>.<Process 13900 [b'/usr/bin/git', b'push', b'-f', b'heroku', b'master']>: <sh.StreamReader object at 0x7f180a59f908> ready to be read from
+21:58:47,537 sh.streamreader DEBUG got chunk size 100: b'remote:                \nremote'
+21:58:47,537 sh.stream_bufferer DEBUG acquiring buffering lock to process chunk (buffering: 1)
+21:58:47,537 sh.stream_bufferer DEBUG got buffering lock to process chunk (buffering: 1)
+21:58:47,537 sh.stream_bufferer DEBUG released buffering lock for processing chunk (buffering: 1)
+21:58:47,557 sh.command.process DEBUG <Command '/usr/bin/git push -f heroku master'>.<Process 13900 [b'/usr/bin/git', b'push', b'-f', b'heroku', b'master']>: <sh.StreamReader object at 0x7f180a59f908> ready to be read from
+21:58:47,557 sh.streamreader DEBUG got chunk size 413: b'remote:        NPM_CONFIG_LOGL'
+21:58:47,557 sh.stream_bufferer DEBUG acquiring buffering lock to process chunk (buffering: 1)
+21:58:47,557 sh.stream_bufferer DEBUG got buffering lock to process chunk (buffering: 1)
+21:58:47,557 sh.stream_bufferer DEBUG released buffering lock for processing chunk (buffering: 1)
+21:58:47,577 sh.command.process DEBUG <Command '/usr/bin/git push -f heroku master'>.<Process 13900 [b'/usr/bin/git', b'push', b'-f', b'heroku', b'master']>: <sh.StreamReader object at 0x7f180a59f908> ready to be read from
+21:58:47,577 sh.streamreader DEBUG got chunk size 58: b'remote:        Resolving node '
+21:58:47,577 sh.stream_bufferer DEBUG acquiring buffering lock to process chunk (buffering: 1)
+21:58:47,577 sh.stream_bufferer DEBUG got buffering lock to process chunk (buffering: 1)
+21:58:47,577 sh.stream_bufferer DEBUG released buffering lock for processing chunk (buffering: 1)
+21:58:47,997 sh.command.process DEBUG <Command '/usr/bin/git push -f heroku master'>.<Process 13900 [b'/usr/bin/git', b'push', b'-f', b'heroku', b'master']>: <sh.StreamReader object at 0x7f180a59f908> ready to be read from
+21:58:47,997 sh.streamreader DEBUG got chunk size 66: b'remote:        Downloading and'
+21:58:47,997 sh.stream_bufferer DEBUG acquiring buffering lock to process chunk (buffering: 1)
+21:58:47,997 sh.stream_bufferer DEBUG got buffering lock to process chunk (buffering: 1)
+21:58:47,997 sh.stream_bufferer DEBUG released buffering lock for processing chunk (buffering: 1)
+21:58:49,657 sh.command.process DEBUG <Command '/usr/bin/git push -f heroku master'>.<Process 13900 [b'/usr/bin/git', b'push', b'-f', b'heroku', b'master']>: <sh.StreamReader object at 0x7f180a59f908> ready to be read from
+21:58:49,657 sh.streamreader DEBUG got chunk size 57: b'remote:        Using default n'
+21:58:49,657 sh.stream_bufferer DEBUG acquiring buffering lock to process chunk (buffering: 1)
+21:58:49,657 sh.stream_bufferer DEBUG got buffering lock to process chunk (buffering: 1)
+21:58:49,657 sh.stream_bufferer DEBUG released buffering lock for processing chunk (buffering: 1)
+21:58:50,497 sh.command.process DEBUG <Command '/usr/bin/git push -f heroku master'>.<Process 13900 [b'/usr/bin/git', b'push', b'-f', b'heroku', b'master']>: <sh.StreamReader object at 0x7f180a59f908> ready to be read from
+21:58:50,497 sh.streamreader DEBUG got chunk size 133: b'remote:                \nremote'
+21:58:50,497 sh.stream_bufferer DEBUG acquiring buffering lock to process chunk (buffering: 1)
+21:58:50,497 sh.stream_bufferer DEBUG got buffering lock to process chunk (buffering: 1)
+21:58:50,497 sh.stream_bufferer DEBUG released buffering lock for processing chunk (buffering: 1)
+21:59:02,417 sh.command.process DEBUG <Command '/usr/bin/git push -f heroku master'>.<Process 13900 [b'/usr/bin/git', b'push', b'-f', b'heroku', b'master']>: <sh.StreamReader object at 0x7f180a59f908> ready to be read from
+21:59:02,417 sh.streamreader DEBUG got chunk size 101: b'remote:        added 336 packa'
+21:59:02,417 sh.stream_bufferer DEBUG acquiring buffering lock to process chunk (buffering: 1)
+21:59:02,417 sh.stream_bufferer DEBUG got buffering lock to process chunk (buffering: 1)
+21:59:02,417 sh.stream_bufferer DEBUG released buffering lock for processing chunk (buffering: 1)
+21:59:02,682 sh.command.process DEBUG <Command '/usr/bin/git push -f heroku master'>.<Process 13900 [b'/usr/bin/git', b'push', b'-f', b'heroku', b'master']>: <sh.StreamReader object at 0x7f180a59f908> ready to be read from
+21:59:02,682 sh.streamreader DEBUG got chunk size 318: b'remote:                \nremote'
+21:59:02,682 sh.stream_bufferer DEBUG acquiring buffering lock to process chunk (buffering: 1)
+21:59:02,682 sh.stream_bufferer DEBUG got buffering lock to process chunk (buffering: 1)
+21:59:02,682 sh.stream_bufferer DEBUG released buffering lock for processing chunk (buffering: 1)
+21:59:02,738 sh.command.process DEBUG <Command '/usr/bin/git push -f heroku master'>.<Process 13900 [b'/usr/bin/git', b'push', b'-f', b'heroku', b'master']>: <sh.StreamReader object at 0x7f180a59f908> ready to be read from
+21:59:02,738 sh.streamreader DEBUG got chunk size 53: b'remote:                \nremote'
+21:59:02,738 sh.stream_bufferer DEBUG acquiring buffering lock to process chunk (buffering: 1)
+21:59:02,738 sh.stream_bufferer DEBUG got buffering lock to process chunk (buffering: 1)
+21:59:02,738 sh.stream_bufferer DEBUG released buffering lock for processing chunk (buffering: 1)
+21:59:02,757 sh.command.process DEBUG <Command '/usr/bin/git push -f heroku master'>.<Process 13900 [b'/usr/bin/git', b'push', b'-f', b'heroku', b'master']>: <sh.StreamReader object at 0x7f180a59f908> ready to be read from
+21:59:02,757 sh.streamreader DEBUG got chunk size 99: b'remote:                \nremote'
+21:59:02,757 sh.stream_bufferer DEBUG acquiring buffering lock to process chunk (buffering: 1)
+21:59:02,757 sh.stream_bufferer DEBUG got buffering lock to process chunk (buffering: 1)
+21:59:02,757 sh.stream_bufferer DEBUG released buffering lock for processing chunk (buffering: 1)
+21:59:03,273 sh.command.process DEBUG <Command '/usr/bin/git push -f heroku master'>.<Process 13900 [b'/usr/bin/git', b'push', b'-f', b'heroku', b'master']>: <sh.StreamReader object at 0x7f180a59f908> ready to be read from
+21:59:03,273 sh.streamreader DEBUG got chunk size 71: b'remote:                \nremote'
+21:59:03,273 sh.stream_bufferer DEBUG acquiring buffering lock to process chunk (buffering: 1)
+21:59:03,273 sh.stream_bufferer DEBUG got buffering lock to process chunk (buffering: 1)
+21:59:03,274 sh.stream_bufferer DEBUG released buffering lock for processing chunk (buffering: 1)
+21:59:07,530 sh.command.process DEBUG <Command '/usr/bin/git push -f heroku master'>.<Process 13900 [b'/usr/bin/git', b'push', b'-f', b'heroku', b'master']>: <sh.StreamReader object at 0x7f180a59f908> ready to be read from
+21:59:07,530 sh.streamreader DEBUG got chunk size 55: b'remote:        audited 1356 pa'
+21:59:07,530 sh.stream_bufferer DEBUG acquiring buffering lock to process chunk (buffering: 1)
+21:59:07,530 sh.stream_bufferer DEBUG got buffering lock to process chunk (buffering: 1)
+21:59:07,530 sh.stream_bufferer DEBUG released buffering lock for processing chunk (buffering: 1)
+21:59:07,765 sh.command.process DEBUG <Command '/usr/bin/git push -f heroku master'>.<Process 13900 [b'/usr/bin/git', b'push', b'-f', b'heroku', b'master']>: <sh.StreamReader object at 0x7f180a59f908> ready to be read from
+21:59:07,765 sh.streamreader DEBUG got chunk size 318: b'remote:                \nremote'
+21:59:07,766 sh.stream_bufferer DEBUG acquiring buffering lock to process chunk (buffering: 1)
+21:59:07,766 sh.stream_bufferer DEBUG got buffering lock to process chunk (buffering: 1)
+21:59:07,766 sh.stream_bufferer DEBUG released buffering lock for processing chunk (buffering: 1)
+21:59:07,859 sh.command.process DEBUG <Command '/usr/bin/git push -f heroku master'>.<Process 13900 [b'/usr/bin/git', b'push', b'-f', b'heroku', b'master']>: <sh.StreamReader object at 0x7f180a59f908> ready to be read from
+21:59:07,859 sh.streamreader DEBUG got chunk size 64: b'remote:                \nremote'
+21:59:07,859 sh.stream_bufferer DEBUG acquiring buffering lock to process chunk (buffering: 1)
+21:59:07,859 sh.stream_bufferer DEBUG got buffering lock to process chunk (buffering: 1)
+21:59:07,860 sh.stream_bufferer DEBUG released buffering lock for processing chunk (buffering: 1)
+21:59:08,979 sh.command.process DEBUG <Command '/usr/bin/git push -f heroku master'>.<Process 13900 [b'/usr/bin/git', b'push', b'-f', b'heroku', b'master']>: <sh.StreamReader object at 0x7f180a59f908> ready to be read from
+21:59:08,980 sh.streamreader DEBUG got chunk size 215: b'remote: -----> Discovering pro'
+21:59:08,980 sh.stream_bufferer DEBUG acquiring buffering lock to process chunk (buffering: 1)
+21:59:08,980 sh.stream_bufferer DEBUG got buffering lock to process chunk (buffering: 1)
+21:59:08,980 sh.stream_bufferer DEBUG released buffering lock for processing chunk (buffering: 1)
+21:59:13,143 sh.command.process DEBUG <Command '/usr/bin/git push -f heroku master'>.<Process 13900 [b'/usr/bin/git', b'push', b'-f', b'heroku', b'master']>: <sh.StreamReader object at 0x7f180a59f908> ready to be read from
+21:59:13,143 sh.streamreader DEBUG got chunk size 35: b'remote:        Done: 36.5M    '
+21:59:13,143 sh.stream_bufferer DEBUG acquiring buffering lock to process chunk (buffering: 1)
+21:59:13,143 sh.stream_bufferer DEBUG got buffering lock to process chunk (buffering: 1)
+21:59:13,144 sh.stream_bufferer DEBUG released buffering lock for processing chunk (buffering: 1)
+21:59:14,157 sh.command.process DEBUG <Command '/usr/bin/git push -f heroku master'>.<Process 13900 [b'/usr/bin/git', b'push', b'-f', b'heroku', b'master']>: <sh.StreamReader object at 0x7f180a59f908> ready to be read from
+21:59:14,157 sh.streamreader DEBUG got chunk size 36: b'remote: -----> Launching...   '
+21:59:14,157 sh.stream_bufferer DEBUG acquiring buffering lock to process chunk (buffering: 1)
+21:59:14,157 sh.stream_bufferer DEBUG got buffering lock to process chunk (buffering: 1)
+21:59:14,158 sh.stream_bufferer DEBUG released buffering lock for processing chunk (buffering: 1)
+21:59:14,958 sh.command.process DEBUG <Command '/usr/bin/git push -f heroku master'>.<Process 13900 [b'/usr/bin/git', b'push', b'-f', b'heroku', b'master']>: <sh.StreamReader object at 0x7f180a59f908> ready to be read from
+21:59:14,959 sh.streamreader DEBUG got chunk size 140: b'remote:        Released v3    '
+21:59:14,959 sh.stream_bufferer DEBUG acquiring buffering lock to process chunk (buffering: 1)
+21:59:14,959 sh.stream_bufferer DEBUG got buffering lock to process chunk (buffering: 1)
+21:59:14,959 sh.stream_bufferer DEBUG released buffering lock for processing chunk (buffering: 1)
+21:59:16,227 sh.command.process DEBUG <Command '/usr/bin/git push -f heroku master'>.<Process 13900 [b'/usr/bin/git', b'push', b'-f', b'heroku', b'master']>: <sh.StreamReader object at 0x7f180a59f908> ready to be read from
+21:59:16,227 sh.streamreader DEBUG got chunk size 42: b'remote: Verifying deploy... do'
+21:59:16,227 sh.stream_bufferer DEBUG acquiring buffering lock to process chunk (buffering: 1)
+21:59:16,227 sh.stream_bufferer DEBUG got buffering lock to process chunk (buffering: 1)
+21:59:16,227 sh.stream_bufferer DEBUG released buffering lock for processing chunk (buffering: 1)
+21:59:16,509 sh.command.process DEBUG <Command '/usr/bin/git push -f heroku master'>.<Process 13900 [b'/usr/bin/git', b'push', b'-f', b'heroku', b'master']>: <sh.StreamReader object at 0x7f180a59f908> ready to be read from
+21:59:16,509 sh.streamreader DEBUG got chunk size 99: b'To https://git.heroku.com/dlew'
+21:59:16,510 sh.stream_bufferer DEBUG acquiring buffering lock to process chunk (buffering: 1)
+21:59:16,510 sh.stream_bufferer DEBUG got buffering lock to process chunk (buffering: 1)
+21:59:16,510 sh.stream_bufferer DEBUG released buffering lock for processing chunk (buffering: 1)
+21:59:16,541 sh.command.process DEBUG <Command '/usr/bin/git push -f heroku master'>.<Process 13900 [b'/usr/bin/git', b'push', b'-f', b'heroku', b'master']>: <sh.StreamReader object at 0x7f180a59fdd8> ready to be read from
+21:59:16,541 sh.command.process.streamreader DEBUG <Command '/usr/bin/git push -f heroku master'>.<Process 13900 [b'/usr/bin/git', b'push', b'-f', b'heroku', b'master']>.stdout: got errno 5, done reading
+21:59:16,541 sh.command.process DEBUG <Command '/usr/bin/git push -f heroku master'>.<Process 13900 [b'/usr/bin/git', b'push', b'-f', b'heroku', b'master']>: <sh.StreamReader object at 0x7f180a59f908> ready to be read from
+21:59:16,541 sh.streamreader DEBUG got no chunk, done reading
+21:59:16,542 sh.stream_bufferer DEBUG acquiring buffering lock for flushing buffer
+21:59:16,542 sh.stream_bufferer DEBUG got buffering lock for flushing buffer
+21:59:16,543 sh.stream_bufferer DEBUG released buffering lock for flushing buffer
+21:59:16,543 sh.command.process.streamreader DEBUG <Command '/usr/bin/git push -f heroku master'>.<Process 13900 [b'/usr/bin/git', b'push', b'-f', b'heroku', b'master']>.stdout: got chunk size 0 to flush: b''
+21:59:16,543 sh.stream_bufferer DEBUG acquiring buffering lock for flushing buffer
+21:59:16,543 sh.stream_bufferer DEBUG got buffering lock for flushing buffer
+21:59:16,543 sh.stream_bufferer DEBUG released buffering lock for flushing buffer
+21:59:16,543 sh.streamreader DEBUG got chunk size 0 to flush: b''
+21:59:16,544 sh.command INFO <Command '/usr/bin/git push -f heroku master', pid 13900>: process completed
+21:59:17,508 sh.command INFO <Command '/bin/rm -rf /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator'>: starting process
+21:59:17,518 sh.command.process DEBUG <Command '/bin/rm -rf /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator'>.<Process 13933 [b'/bin/rm', b'-rf', b'/export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator']>: started process
+21:59:17,520 sh.command INFO <Command '/bin/rm -rf /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator', pid 13933>: process started
+21:59:17,521 sh.command.process DEBUG <Command '/bin/rm -rf /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator'>.<Process 13933 [b'/bin/rm', b'-rf', b'/export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator']>: acquiring wait lock to wait for completion
+21:59:17,521 sh.command.process DEBUG <Command '/bin/rm -rf /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator'>.<Process 13933 [b'/bin/rm', b'-rf', b'/export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator']>: got wait lock
+21:59:17,521 sh.command.process DEBUG <Command '/bin/rm -rf /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator'>.<Process 13933 [b'/bin/rm', b'-rf', b'/export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator']>: exit code not set, waiting on pid
+21:59:17,530 sh.command.process DEBUG <Command '/bin/rm -rf /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator'>.<Process 13933 [b'/bin/rm', b'-rf', b'/export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator']>: <sh.StreamReader object at 0x7f180a5bf1d0> ready to be read from
+21:59:17,530 sh.command.process.streamreader DEBUG <Command '/bin/rm -rf /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator'>.<Process 13933 [b'/bin/rm', b'-rf', b'/export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator']>.stdout: got errno 5, done reading
+21:59:17,530 sh.command.process DEBUG <Command '/bin/rm -rf /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator'>.<Process 13933 [b'/bin/rm', b'-rf', b'/export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator']>: <sh.StreamReader object at 0x7f180a5bf160> ready to be read from
+21:59:17,530 sh.streamreader DEBUG got no chunk, done reading
+21:59:17,530 sh.stream_bufferer DEBUG acquiring buffering lock for flushing buffer
+21:59:17,530 sh.stream_bufferer DEBUG got buffering lock for flushing buffer
+21:59:17,531 sh.stream_bufferer DEBUG released buffering lock for flushing buffer
+21:59:17,531 sh.command.process.streamreader DEBUG <Command '/bin/rm -rf /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator'>.<Process 13933 [b'/bin/rm', b'-rf', b'/export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator']>.stdout: got chunk size 0 to flush: b''
+21:59:17,531 sh.stream_bufferer DEBUG acquiring buffering lock for flushing buffer
+21:59:17,531 sh.stream_bufferer DEBUG got buffering lock for flushing buffer
+21:59:17,531 sh.stream_bufferer DEBUG released buffering lock for flushing buffer
+21:59:17,532 sh.streamreader DEBUG got chunk size 0 to flush: b''
+21:59:17,532 sh.command INFO <Command '/bin/rm -rf /export/a14/dlewis/ParlAI/parlai/mturk/tmp/heroku_server_1bcf3a28-modelevaluator', pid 13933>: process completed
+21:59:17,532 mturk INFO https://dlewis-1bcf3a28-modelevaluator.herokuapp.com
+21:59:17,532 mturk INFO MTurk server setup done.
+
+21:59:17,635 botocore.hooks DEBUG Event choose-service-name: calling handler <function handle_service_name_alias at 0x7f180b58c950>
+21:59:17,650 botocore.loaders DEBUG Loading JSON file: /home/dlewis/anaconda3/envs/p36/lib/python3.6/site-packages/botocore/data/sns/2010-03-31/service-2.json
+21:59:17,660 botocore.hooks DEBUG Event creating-client-class.sns: calling handler <function add_generate_presigned_url at 0x7f180b5fa1e0>
+21:59:17,661 botocore.args DEBUG The s3 config key is not a dictionary type, ignoring its value of: None
+21:59:17,665 botocore.endpoint DEBUG Setting sns timeout as (60, 60)
+21:59:17,667 botocore.client DEBUG Registering retry handlers for service: sns
+21:59:17,668 botocore.hooks DEBUG Event before-parameter-build.sns.CreateTopic: calling handler <function generate_idempotent_uuid at 0x7f180b5a6d90>
+21:59:17,669 botocore.hooks DEBUG Event before-call.sns.CreateTopic: calling handler <function inject_api_version_header_if_needed at 0x7f180b5aa7b8>
+21:59:17,669 botocore.endpoint DEBUG Making request for OperationModel(name=CreateTopic) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.9.247 Python/3.6.1 Linux/4.9.0-11-amd64 Botocore/1.12.247'}, 'body': {'Action': 'CreateTopic', 'Version': '2010-03-31', 'Name': 'model_evaluator'}, 'url': 'https://sns.us-east-1.amazonaws.com/', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x7f180ac10ac8>, 'has_streaming_input': False, 'auth_type': None}}
+21:59:17,670 botocore.hooks DEBUG Event request-created.sns.CreateTopic: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x7f180ac10b00>>
+21:59:17,670 botocore.hooks DEBUG Event choose-signer.sns.CreateTopic: calling handler <function set_operation_specific_signer at 0x7f180b5a6c80>
+21:59:17,671 botocore.auth DEBUG Calculating signature using v4 auth.
+21:59:17,671 botocore.auth DEBUG CanonicalRequest:
+POST
+/
+
+content-type:application/x-www-form-urlencoded; charset=utf-8
+host:sns.us-east-1.amazonaws.com
+x-amz-date:20200324T015917Z
+
+content-type;host;x-amz-date
+e4b29f14198630918eebc99234ccb4f9e7cee754c166a648653c99410a3c5ec9
+21:59:17,671 botocore.auth DEBUG StringToSign:
+AWS4-HMAC-SHA256
+20200324T015917Z
+20200324/us-east-1/sns/aws4_request
+430eb2f0862fe13347525f237fa135f6391598499a9d6f2bb5961144456f6267
+21:59:17,672 botocore.auth DEBUG Signature:
+40f1131e06f19d800434ff1706317535b09f415911ff3323620b955adf653828
+21:59:17,672 botocore.endpoint DEBUG Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://sns.us-east-1.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.9.247 Python/3.6.1 Linux/4.9.0-11-amd64 Botocore/1.12.247', 'X-Amz-Date': b'20200324T015917Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAS3M5Z7OFELXDLS7S/20200324/us-east-1/sns/aws4_request, SignedHeaders=content-type;host;x-amz-date, Signature=40f1131e06f19d800434ff1706317535b09f415911ff3323620b955adf653828', 'Content-Length': '58'}>
+21:59:17,673 urllib3.util.retry DEBUG Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+21:59:17,673 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): sns.us-east-1.amazonaws.com
+21:59:17,858 urllib3.connectionpool DEBUG https://sns.us-east-1.amazonaws.com:443 "POST / HTTP/1.1" 200 322
+21:59:17,859 botocore.parsers DEBUG Response headers: {'x-amzn-RequestId': '4b475626-4912-5168-ba2d-00d522a78460', 'Content-Type': 'text/xml', 'Content-Length': '322', 'Date': 'Tue, 24 Mar 2020 01:59:17 GMT'}
+21:59:17,859 botocore.parsers DEBUG Response body:
+b'<CreateTopicResponse xmlns="http://sns.amazonaws.com/doc/2010-03-31/">\n  <CreateTopicResult>\n    <TopicArn>arn:aws:sns:us-east-1:196288838538:model_evaluator</TopicArn>\n  </CreateTopicResult>\n  <ResponseMetadata>\n    <RequestId>4b475626-4912-5168-ba2d-00d522a78460</RequestId>\n  </ResponseMetadata>\n</CreateTopicResponse>\n'
+21:59:17,860 botocore.hooks DEBUG Event needs-retry.sns.CreateTopic: calling handler <botocore.retryhandler.RetryHandler object at 0x7f1808f329b0>
+21:59:17,860 botocore.retryhandler DEBUG No retry needed.
+21:59:17,861 botocore.hooks DEBUG Event before-parameter-build.sns.Subscribe: calling handler <function generate_idempotent_uuid at 0x7f180b5a6d90>
+21:59:17,861 botocore.hooks DEBUG Event before-call.sns.Subscribe: calling handler <function inject_api_version_header_if_needed at 0x7f180b5aa7b8>
+21:59:17,861 botocore.endpoint DEBUG Making request for OperationModel(name=Subscribe) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.9.247 Python/3.6.1 Linux/4.9.0-11-amd64 Botocore/1.12.247'}, 'body': {'Action': 'Subscribe', 'Version': '2010-03-31', 'TopicArn': 'arn:aws:sns:us-east-1:196288838538:model_evaluator', 'Protocol': 'https', 'Endpoint': 'https://dlewis-1bcf3a28-modelevaluator.herokuapp.com/sns_posts?task_group_id=model_evaluator_1585015157'}, 'url': 'https://sns.us-east-1.amazonaws.com/', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x7f180ac10ac8>, 'has_streaming_input': False, 'auth_type': None}}
+21:59:17,862 botocore.hooks DEBUG Event request-created.sns.Subscribe: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x7f180ac10b00>>
+21:59:17,862 botocore.hooks DEBUG Event choose-signer.sns.Subscribe: calling handler <function set_operation_specific_signer at 0x7f180b5a6c80>
+21:59:17,863 botocore.auth DEBUG Calculating signature using v4 auth.
+21:59:17,863 botocore.auth DEBUG CanonicalRequest:
+POST
+/
+
+content-type:application/x-www-form-urlencoded; charset=utf-8
+host:sns.us-east-1.amazonaws.com
+x-amz-date:20200324T015917Z
+
+content-type;host;x-amz-date
+64da62ff208ebe243c8d47388dcc8c3ee3b96f446f198b38222d239a38e92d1b
+21:59:17,863 botocore.auth DEBUG StringToSign:
+AWS4-HMAC-SHA256
+20200324T015917Z
+20200324/us-east-1/sns/aws4_request
+b8515aaa6f892a73c5bd7115c45ab5e55fb630aee6aa008883d64611bc94d3b7
+21:59:17,864 botocore.auth DEBUG Signature:
+ce37f41c6faeb5f1cbc2980b11e5f12e25445d7ccec5e094032e4d0d5221a224
+21:59:17,864 botocore.endpoint DEBUG Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://sns.us-east-1.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.9.247 Python/3.6.1 Linux/4.9.0-11-amd64 Botocore/1.12.247', 'X-Amz-Date': b'20200324T015917Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAS3M5Z7OFELXDLS7S/20200324/us-east-1/sns/aws4_request, SignedHeaders=content-type;host;x-amz-date, Signature=ce37f41c6faeb5f1cbc2980b11e5f12e25445d7ccec5e094032e4d0d5221a224', 'Content-Length': '245'}>
+21:59:17,865 urllib3.util.retry DEBUG Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+21:59:18,324 urllib3.connectionpool DEBUG https://sns.us-east-1.amazonaws.com:443 "POST / HTTP/1.1" 200 298
+21:59:18,324 botocore.parsers DEBUG Response headers: {'x-amzn-RequestId': 'b0fa8481-9cbe-5822-8cf3-d272f70b3d2a', 'Content-Type': 'text/xml', 'Content-Length': '298', 'Date': 'Tue, 24 Mar 2020 01:59:18 GMT'}
+21:59:18,324 botocore.parsers DEBUG Response body:
+b'<SubscribeResponse xmlns="http://sns.amazonaws.com/doc/2010-03-31/">\n  <SubscribeResult>\n    <SubscriptionArn>pending confirmation</SubscriptionArn>\n  </SubscribeResult>\n  <ResponseMetadata>\n    <RequestId>b0fa8481-9cbe-5822-8cf3-d272f70b3d2a</RequestId>\n  </ResponseMetadata>\n</SubscribeResponse>\n'
+21:59:18,325 botocore.hooks DEBUG Event needs-retry.sns.Subscribe: calling handler <botocore.retryhandler.RetryHandler object at 0x7f1808f329b0>
+21:59:18,325 botocore.retryhandler DEBUG No retry needed.
+21:59:18,326 botocore.hooks DEBUG Event before-parameter-build.sns.GetTopicAttributes: calling handler <function generate_idempotent_uuid at 0x7f180b5a6d90>
+21:59:18,327 botocore.hooks DEBUG Event before-call.sns.GetTopicAttributes: calling handler <function inject_api_version_header_if_needed at 0x7f180b5aa7b8>
+21:59:18,327 botocore.endpoint DEBUG Making request for OperationModel(name=GetTopicAttributes) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.9.247 Python/3.6.1 Linux/4.9.0-11-amd64 Botocore/1.12.247'}, 'body': {'Action': 'GetTopicAttributes', 'Version': '2010-03-31', 'TopicArn': 'arn:aws:sns:us-east-1:196288838538:model_evaluator'}, 'url': 'https://sns.us-east-1.amazonaws.com/', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x7f180ac10ac8>, 'has_streaming_input': False, 'auth_type': None}}
+21:59:18,327 botocore.hooks DEBUG Event request-created.sns.GetTopicAttributes: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x7f180ac10b00>>
+21:59:18,328 botocore.hooks DEBUG Event choose-signer.sns.GetTopicAttributes: calling handler <function set_operation_specific_signer at 0x7f180b5a6c80>
+21:59:18,328 botocore.auth DEBUG Calculating signature using v4 auth.
+21:59:18,328 botocore.auth DEBUG CanonicalRequest:
+POST
+/
+
+content-type:application/x-www-form-urlencoded; charset=utf-8
+host:sns.us-east-1.amazonaws.com
+x-amz-date:20200324T015918Z
+
+content-type;host;x-amz-date
+bff7bc2b97ef4b2f79f038c31f478d27cd832a4cd8ea630b29cbb07e1e3885d6
+21:59:18,329 botocore.auth DEBUG StringToSign:
+AWS4-HMAC-SHA256
+20200324T015918Z
+20200324/us-east-1/sns/aws4_request
+de6d47a631a2f139211208130a7975c6e0e41cb2c79551e1c882630446e46f73
+21:59:18,329 botocore.auth DEBUG Signature:
+8d0eec5acbeaf661580baa4cc2c8d5a95fddfcbd912374904e879a8884719867
+21:59:18,329 botocore.endpoint DEBUG Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://sns.us-east-1.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.9.247 Python/3.6.1 Linux/4.9.0-11-amd64 Botocore/1.12.247', 'X-Amz-Date': b'20200324T015918Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAS3M5Z7OFELXDLS7S/20200324/us-east-1/sns/aws4_request, SignedHeaders=content-type;host;x-amz-date, Signature=8d0eec5acbeaf661580baa4cc2c8d5a95fddfcbd912374904e879a8884719867', 'Content-Length': '114'}>
+21:59:18,330 urllib3.util.retry DEBUG Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+21:59:18,350 urllib3.connectionpool DEBUG https://sns.us-east-1.amazonaws.com:443 "POST / HTTP/1.1" 200 2147
+21:59:18,350 botocore.parsers DEBUG Response headers: {'x-amzn-RequestId': '000e4880-29ec-57c4-8db1-1e73425ae2cc', 'Content-Type': 'text/xml', 'Content-Length': '2147', 'Vary': 'Accept-Encoding', 'Date': 'Tue, 24 Mar 2020 01:59:18 GMT'}
+21:59:18,350 botocore.parsers DEBUG Response body:
+b'<GetTopicAttributesResponse xmlns="http://sns.amazonaws.com/doc/2010-03-31/">\n  <GetTopicAttributesResult>\n    <Attributes>\n      <entry>\n        <key>Policy</key>\n        <value>{&quot;Version&quot;:&quot;2008-10-17&quot;,&quot;Id&quot;:&quot;__default_policy_ID&quot;,&quot;Statement&quot;:[{&quot;Sid&quot;:&quot;__default_statement_ID&quot;,&quot;Effect&quot;:&quot;Allow&quot;,&quot;Principal&quot;:{&quot;AWS&quot;:&quot;*&quot;},&quot;Action&quot;:[&quot;SNS:GetTopicAttributes&quot;,&quot;SNS:SetTopicAttributes&quot;,&quot;SNS:AddPermission&quot;,&quot;SNS:RemovePermission&quot;,&quot;SNS:DeleteTopic&quot;,&quot;SNS:Subscribe&quot;,&quot;SNS:ListSubscriptionsByTopic&quot;,&quot;SNS:Publish&quot;,&quot;SNS:Receive&quot;],&quot;Resource&quot;:&quot;arn:aws:sns:us-east-1:196288838538:model_evaluator&quot;,&quot;Condition&quot;:{&quot;StringEquals&quot;:{&quot;AWS:SourceOwner&quot;:&quot;196288838538&quot;}}}]}</value>\n      </entry>\n      <entry>\n        <key>Owner</key>\n        <value>196288838538</value>\n      </entry>\n      <entry>\n        <key>SubscriptionsPending</key>\n        <value>0</value>\n      </entry>\n      <entry>\n        <key>TopicArn</key>\n        <value>arn:aws:sns:us-east-1:196288838538:model_evaluator</value>\n      </entry>\n      <entry>\n        <key>EffectiveDeliveryPolicy</key>\n        <value>{&quot;http&quot;:{&quot;defaultHealthyRetryPolicy&quot;:{&quot;minDelayTarget&quot;:20,&quot;maxDelayTarget&quot;:20,&quot;numRetries&quot;:3,&quot;numMaxDelayRetries&quot;:0,&quot;numNoDelayRetries&quot;:0,&quot;numMinDelayRetries&quot;:0,&quot;backoffFunction&quot;:&quot;linear&quot;},&quot;disableSubscriptionOverrides&quot;:false}}</value>\n      </entry>\n      <entry>\n        <key>SubscriptionsConfirmed</key>\n        <value>0</value>\n      </entry>\n      <entry>\n        <key>DisplayName</key>\n        <value/>\n      </entry>\n      <entry>\n        <key>SubscriptionsDeleted</key>\n        <value>0</value>\n      </entry>\n    </Attributes>\n  </GetTopicAttributesResult>\n  <ResponseMetadata>\n    <RequestId>000e4880-29ec-57c4-8db1-1e73425ae2cc</RequestId>\n  </ResponseMetadata>\n</GetTopicAttributesResponse>\n'
+21:59:18,351 botocore.hooks DEBUG Event needs-retry.sns.GetTopicAttributes: calling handler <botocore.retryhandler.RetryHandler object at 0x7f1808f329b0>
+21:59:18,352 botocore.retryhandler DEBUG No retry needed.
+21:59:18,353 botocore.hooks DEBUG Event before-parameter-build.sns.SetTopicAttributes: calling handler <function generate_idempotent_uuid at 0x7f180b5a6d90>
+21:59:18,353 botocore.hooks DEBUG Event before-call.sns.SetTopicAttributes: calling handler <function inject_api_version_header_if_needed at 0x7f180b5aa7b8>
+21:59:18,353 botocore.endpoint DEBUG Making request for OperationModel(name=SetTopicAttributes) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.9.247 Python/3.6.1 Linux/4.9.0-11-amd64 Botocore/1.12.247'}, 'body': {'Action': 'SetTopicAttributes', 'Version': '2010-03-31', 'TopicArn': 'arn:aws:sns:us-east-1:196288838538:model_evaluator', 'AttributeName': 'Policy', 'AttributeValue': '{\n    "Version": "2008-10-17",\n    "Id": "arn:aws:sns:us-east-1:196288838538:model_evaluator/MTurkOnlyPolicy",\n    "Statement": [\n        {\n            "Sid": "MTurkOnlyPolicy",\n            "Effect": "Allow",\n            "Principal": {\n                "Service": "mturk-requester.amazonaws.com"\n            },\n            "Action": "SNS:Publish",\n            "Resource": "arn:aws:sns:us-east-1:196288838538:model_evaluator"\n        }\n    ]}'}, 'url': 'https://sns.us-east-1.amazonaws.com/', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x7f180ac10ac8>, 'has_streaming_input': False, 'auth_type': None}}
+21:59:18,354 botocore.hooks DEBUG Event request-created.sns.SetTopicAttributes: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x7f180ac10b00>>
+21:59:18,354 botocore.hooks DEBUG Event choose-signer.sns.SetTopicAttributes: calling handler <function set_operation_specific_signer at 0x7f180b5a6c80>
+21:59:18,355 botocore.auth DEBUG Calculating signature using v4 auth.
+21:59:18,355 botocore.auth DEBUG CanonicalRequest:
+POST
+/
+
+content-type:application/x-www-form-urlencoded; charset=utf-8
+host:sns.us-east-1.amazonaws.com
+x-amz-date:20200324T015918Z
+
+content-type;host;x-amz-date
+507e88436433705e651a429253e4175e70d38f49468d3042b0367d53a0829341
+21:59:18,355 botocore.auth DEBUG StringToSign:
+AWS4-HMAC-SHA256
+20200324T015918Z
+20200324/us-east-1/sns/aws4_request
+137886e80b5f4e6fa87535375c7d09b85974752e444196712fa379a71210c519
+21:59:18,355 botocore.auth DEBUG Signature:
+b3d663f7a89aaacdad82fe4013520294b0102bd7bb31c44743d3e72233e96db8
+21:59:18,356 botocore.endpoint DEBUG Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://sns.us-east-1.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.9.247 Python/3.6.1 Linux/4.9.0-11-amd64 Botocore/1.12.247', 'X-Amz-Date': b'20200324T015918Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAS3M5Z7OFELXDLS7S/20200324/us-east-1/sns/aws4_request, SignedHeaders=content-type;host;x-amz-date, Signature=b3d663f7a89aaacdad82fe4013520294b0102bd7bb31c44743d3e72233e96db8', 'Content-Length': '751'}>
+21:59:18,357 urllib3.util.retry DEBUG Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+21:59:18,402 urllib3.connectionpool DEBUG https://sns.us-east-1.amazonaws.com:443 "POST / HTTP/1.1" 200 215
+21:59:18,402 botocore.parsers DEBUG Response headers: {'x-amzn-RequestId': '32c4867e-6751-5175-8a43-d08d0ce7947d', 'Content-Type': 'text/xml', 'Content-Length': '215', 'Date': 'Tue, 24 Mar 2020 01:59:18 GMT'}
+21:59:18,402 botocore.parsers DEBUG Response body:
+b'<SetTopicAttributesResponse xmlns="http://sns.amazonaws.com/doc/2010-03-31/">\n  <ResponseMetadata>\n    <RequestId>32c4867e-6751-5175-8a43-d08d0ce7947d</RequestId>\n  </ResponseMetadata>\n</SetTopicAttributesResponse>\n'
+21:59:18,403 botocore.hooks DEBUG Event needs-retry.sns.SetTopicAttributes: calling handler <botocore.retryhandler.RetryHandler object at 0x7f1808f329b0>
+21:59:18,403 botocore.retryhandler DEBUG No retry needed.
+21:59:18,405 mturk INFO Creating HITs...
+21:59:18,405 mturk WARNING You should be calling `ready_to_accept_workers` before `create_hits` to ensure that the socket is connected beforehits are added. This will be enforced in future versions.
+21:59:18,405 mturk INFO Creating 2 hits...
+21:59:18,405 mturk WARNING Qualifications are not set in sandbox mode.
+21:59:18,407 botocore.hooks DEBUG Event before-parameter-build.mturk.CreateHITType: calling handler <function generate_idempotent_uuid at 0x7f180b5a6d90>
+21:59:18,408 botocore.hooks DEBUG Event before-call.mturk.CreateHITType: calling handler <function inject_api_version_header_if_needed at 0x7f180b5aa7b8>
+21:59:18,408 botocore.endpoint DEBUG Making request for OperationModel(name=CreateHITType) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'X-Amz-Target': 'MTurkRequesterServiceV20170117.CreateHITType', 'Content-Type': 'application/x-amz-json-1.1', 'User-Agent': 'Boto3/1.9.247 Python/3.6.1 Linux/4.9.0-11-amd64 Botocore/1.12.247'}, 'body': b'{"AutoApprovalDelayInSeconds": 432000, "AssignmentDurationInSeconds": 1800, "Reward": "0.0", "Title": "Give a rating to a dialog between two people", "Keywords": "chat,dialog,rating", "Description": "Give a rating to a dialog between two people. (ID: model_evaluator_1585015157)", "QualificationRequirements": [{"QualificationTypeId": "00000000000000000071", "Comparator": "In", "LocaleValues": [{"Country": "US"}, {"Country": "CA"}, {"Country": "GB"}, {"Country": "AU"}, {"Country": "NZ"}], "RequiredToPreview": true}]}', 'url': 'https://mturk-requester-sandbox.us-east-1.amazonaws.com/', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x7f180ac5d5c0>, 'has_streaming_input': False, 'auth_type': None}}
+21:59:18,408 botocore.hooks DEBUG Event request-created.mturk.CreateHITType: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x7f180ac5d550>>
+21:59:18,409 botocore.hooks DEBUG Event choose-signer.mturk.CreateHITType: calling handler <function set_operation_specific_signer at 0x7f180b5a6c80>
+21:59:18,409 botocore.auth DEBUG Calculating signature using v4 auth.
+21:59:18,410 botocore.auth DEBUG CanonicalRequest:
+POST
+/
+
+content-type:application/x-amz-json-1.1
+host:mturk-requester-sandbox.us-east-1.amazonaws.com
+x-amz-date:20200324T015918Z
+x-amz-target:MTurkRequesterServiceV20170117.CreateHITType
+
+content-type;host;x-amz-date;x-amz-target
+13cb7bee09b69dc533f5474cdb9592de1aa213d500b924d7f246232ba513a844
+21:59:18,410 botocore.auth DEBUG StringToSign:
+AWS4-HMAC-SHA256
+20200324T015918Z
+20200324/us-east-1/mturk-requester/aws4_request
+5a26591da20989f576c870f946937f4644987d85f7364ac3429c9c16520312d7
+21:59:18,410 botocore.auth DEBUG Signature:
+5692ef7286cdd0299788696fdd00746ea52736b9fb93bf092777543e93766887
+21:59:18,410 botocore.endpoint DEBUG Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://mturk-requester-sandbox.us-east-1.amazonaws.com/, headers={'X-Amz-Target': b'MTurkRequesterServiceV20170117.CreateHITType', 'Content-Type': b'application/x-amz-json-1.1', 'User-Agent': b'Boto3/1.9.247 Python/3.6.1 Linux/4.9.0-11-amd64 Botocore/1.12.247', 'X-Amz-Date': b'20200324T015918Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAS3M5Z7OFELXDLS7S/20200324/us-east-1/mturk-requester/aws4_request, SignedHeaders=content-type;host;x-amz-date;x-amz-target, Signature=5692ef7286cdd0299788696fdd00746ea52736b9fb93bf092777543e93766887', 'Content-Length': '520'}>
+21:59:18,411 urllib3.util.retry DEBUG Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+21:59:18,411 urllib3.connectionpool DEBUG Resetting dropped connection: mturk-requester-sandbox.us-east-1.amazonaws.com
+21:59:18,536 urllib3.connectionpool DEBUG https://mturk-requester-sandbox.us-east-1.amazonaws.com:443 "POST / HTTP/1.1" 200 46
+21:59:18,537 botocore.parsers DEBUG Response headers: {'x-amzn-RequestId': 'a2a12913-6dcb-4ece-8937-d0d1908b3aaf', 'Content-Type': 'application/x-amz-json-1.1', 'Content-Length': '46', 'Date': 'Tue, 24 Mar 2020 01:59:17 GMT'}
+21:59:18,537 botocore.parsers DEBUG Response body:
+b'{"HITTypeId":"3MFWWXCWB55MTRGCJLLJVP206DWC6V"}'
+21:59:18,537 botocore.hooks DEBUG Event needs-retry.mturk.CreateHITType: calling handler <botocore.retryhandler.RetryHandler object at 0x7f180ac5da90>
+21:59:18,538 botocore.retryhandler DEBUG No retry needed.
+21:59:18,538 mturk INFO https://dlewis-1bcf3a28-modelevaluator.herokuapp.com/chat_index?task_group_id=model_evaluator_1585015157
+21:59:18,539 botocore.hooks DEBUG Event before-parameter-build.mturk.UpdateNotificationSettings: calling handler <function generate_idempotent_uuid at 0x7f180b5a6d90>
+21:59:18,539 botocore.hooks DEBUG Event before-call.mturk.UpdateNotificationSettings: calling handler <function inject_api_version_header_if_needed at 0x7f180b5aa7b8>
+21:59:18,540 botocore.endpoint DEBUG Making request for OperationModel(name=UpdateNotificationSettings) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'X-Amz-Target': 'MTurkRequesterServiceV20170117.UpdateNotificationSettings', 'Content-Type': 'application/x-amz-json-1.1', 'User-Agent': 'Boto3/1.9.247 Python/3.6.1 Linux/4.9.0-11-amd64 Botocore/1.12.247'}, 'body': b'{"HITTypeId": "3MFWWXCWB55MTRGCJLLJVP206DWC6V", "Notification": {"Destination": "arn:aws:sns:us-east-1:196288838538:model_evaluator", "Transport": "SNS", "Version": "2006-05-05", "EventTypes": ["AssignmentAbandoned", "AssignmentReturned", "AssignmentSubmitted"]}, "Active": true}', 'url': 'https://mturk-requester-sandbox.us-east-1.amazonaws.com/', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x7f180ac5d5c0>, 'has_streaming_input': False, 'auth_type': None}}
+21:59:18,540 botocore.hooks DEBUG Event request-created.mturk.UpdateNotificationSettings: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x7f180ac5d550>>
+21:59:18,540 botocore.hooks DEBUG Event choose-signer.mturk.UpdateNotificationSettings: calling handler <function set_operation_specific_signer at 0x7f180b5a6c80>
+21:59:18,541 botocore.auth DEBUG Calculating signature using v4 auth.
+21:59:18,541 botocore.auth DEBUG CanonicalRequest:
+POST
+/
+
+content-type:application/x-amz-json-1.1
+host:mturk-requester-sandbox.us-east-1.amazonaws.com
+x-amz-date:20200324T015918Z
+x-amz-target:MTurkRequesterServiceV20170117.UpdateNotificationSettings
+
+content-type;host;x-amz-date;x-amz-target
+d2fed2db5ef58d35cd356d3307d417a694fb1f4c38784b7559f5dc9a5e0deda6
+21:59:18,541 botocore.auth DEBUG StringToSign:
+AWS4-HMAC-SHA256
+20200324T015918Z
+20200324/us-east-1/mturk-requester/aws4_request
+0dd087f963af31f0a25587ea15b3babfb7e7595e7f7b4c73f0242f208bba6880
+21:59:18,542 botocore.auth DEBUG Signature:
+ca531d9c202bb165f9249fae2fe30003cd81d6123d72491aeb3eead3cbf87dfc
+21:59:18,542 botocore.endpoint DEBUG Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://mturk-requester-sandbox.us-east-1.amazonaws.com/, headers={'X-Amz-Target': b'MTurkRequesterServiceV20170117.UpdateNotificationSettings', 'Content-Type': b'application/x-amz-json-1.1', 'User-Agent': b'Boto3/1.9.247 Python/3.6.1 Linux/4.9.0-11-amd64 Botocore/1.12.247', 'X-Amz-Date': b'20200324T015918Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAS3M5Z7OFELXDLS7S/20200324/us-east-1/mturk-requester/aws4_request, SignedHeaders=content-type;host;x-amz-date;x-amz-target, Signature=ca531d9c202bb165f9249fae2fe30003cd81d6123d72491aeb3eead3cbf87dfc', 'Content-Length': '279'}>
+21:59:18,542 urllib3.util.retry DEBUG Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+21:59:18,579 urllib3.connectionpool DEBUG https://mturk-requester-sandbox.us-east-1.amazonaws.com:443 "POST / HTTP/1.1" 200 2
+21:59:18,579 botocore.parsers DEBUG Response headers: {'x-amzn-RequestId': '0f8431b5-9299-4f30-8703-945478b7ff44', 'Content-Type': 'application/x-amz-json-1.1', 'Content-Length': '2', 'Date': 'Tue, 24 Mar 2020 01:59:17 GMT'}
+21:59:18,580 botocore.parsers DEBUG Response body:
+b'{}'
+21:59:18,580 botocore.hooks DEBUG Event needs-retry.mturk.UpdateNotificationSettings: calling handler <botocore.retryhandler.RetryHandler object at 0x7f180ac5da90>
+21:59:18,580 botocore.retryhandler DEBUG No retry needed.
+21:59:18,581 botocore.hooks DEBUG Event before-parameter-build.mturk.CreateHITWithHITType: calling handler <function generate_idempotent_uuid at 0x7f180b5a6d90>
+21:59:18,582 botocore.hooks DEBUG Event before-call.mturk.CreateHITWithHITType: calling handler <function inject_api_version_header_if_needed at 0x7f180b5aa7b8>
+21:59:18,582 botocore.endpoint DEBUG Making request for OperationModel(name=CreateHITWithHITType) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'X-Amz-Target': 'MTurkRequesterServiceV20170117.CreateHITWithHITType', 'Content-Type': 'application/x-amz-json-1.1', 'User-Agent': 'Boto3/1.9.247 Python/3.6.1 Linux/4.9.0-11-amd64 Botocore/1.12.247'}, 'body': b'{"HITTypeId": "3MFWWXCWB55MTRGCJLLJVP206DWC6V", "MaxAssignments": 1, "LifetimeInSeconds": 31536000, "Question": "<ExternalQuestion xmlns=\\"http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2006-07-14/ExternalQuestion.xsd\\"><ExternalURL>https://dlewis-1bcf3a28-modelevaluator.herokuapp.com/chat_index?task_group_id=model_evaluator_1585015157</ExternalURL><FrameHeight>650</FrameHeight></ExternalQuestion>"}', 'url': 'https://mturk-requester-sandbox.us-east-1.amazonaws.com/', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x7f180ac5d5c0>, 'has_streaming_input': False, 'auth_type': None}}
+21:59:18,583 botocore.hooks DEBUG Event request-created.mturk.CreateHITWithHITType: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x7f180ac5d550>>
+21:59:18,583 botocore.hooks DEBUG Event choose-signer.mturk.CreateHITWithHITType: calling handler <function set_operation_specific_signer at 0x7f180b5a6c80>
+21:59:18,584 botocore.auth DEBUG Calculating signature using v4 auth.
+21:59:18,584 botocore.auth DEBUG CanonicalRequest:
+POST
+/
+
+content-type:application/x-amz-json-1.1
+host:mturk-requester-sandbox.us-east-1.amazonaws.com
+x-amz-date:20200324T015918Z
+x-amz-target:MTurkRequesterServiceV20170117.CreateHITWithHITType
+
+content-type;host;x-amz-date;x-amz-target
+cb33e79c15b416acd29184a0586310ea881a0ca4ab29101629c307d35d30ef08
+21:59:18,584 botocore.auth DEBUG StringToSign:
+AWS4-HMAC-SHA256
+20200324T015918Z
+20200324/us-east-1/mturk-requester/aws4_request
+227c7b6b87e4cc59e306326678d495eda35090b93dfe12aebed941b5a4b6c033
+21:59:18,584 botocore.auth DEBUG Signature:
+ec26213c42bfc3abb0115f6431eb8c120e82deeda6e9fdd3fe3d34b871b8a169
+21:59:18,585 botocore.endpoint DEBUG Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://mturk-requester-sandbox.us-east-1.amazonaws.com/, headers={'X-Amz-Target': b'MTurkRequesterServiceV20170117.CreateHITWithHITType', 'Content-Type': b'application/x-amz-json-1.1', 'User-Agent': b'Boto3/1.9.247 Python/3.6.1 Linux/4.9.0-11-amd64 Botocore/1.12.247', 'X-Amz-Date': b'20200324T015918Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAS3M5Z7OFELXDLS7S/20200324/us-east-1/mturk-requester/aws4_request, SignedHeaders=content-type;host;x-amz-date;x-amz-target, Signature=ec26213c42bfc3abb0115f6431eb8c120e82deeda6e9fdd3fe3d34b871b8a169', 'Content-Length': '420'}>
+21:59:18,585 urllib3.util.retry DEBUG Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+21:59:18,778 urllib3.connectionpool DEBUG https://mturk-requester-sandbox.us-east-1.amazonaws.com:443 "POST / HTTP/1.1" 200 1216
+21:59:18,779 botocore.parsers DEBUG Response headers: {'x-amzn-RequestId': '0d8c37ef-5230-4a98-b623-ff83df1b39ce', 'Content-Type': 'application/x-amz-json-1.1', 'Content-Length': '1216', 'Date': 'Tue, 24 Mar 2020 01:59:17 GMT'}
+21:59:18,779 botocore.parsers DEBUG Response body:
+b'{"HIT":{"AssignmentDurationInSeconds":1800,"AutoApprovalDelayInSeconds":432000,"CreationTime":1.585015158E9,"Description":"Give a rating to a dialog between two people. (ID: model_evaluator_1585015157)","Expiration":1.616551158E9,"HITGroupId":"33EWWXEH95W6ZL7BCV4DTSA8EA340B","HITId":"3SA4EMRVKY0RJEVIS9MRL8YP64WP0O","HITReviewStatus":"NotReviewed","HITStatus":"Assignable","HITTypeId":"3MFWWXCWB55MTRGCJLLJVP206DWC6V","Keywords":"chat,dialog,rating","MaxAssignments":1,"NumberOfAssignmentsAvailable":1,"NumberOfAssignmentsCompleted":0,"NumberOfAssignmentsPending":0,"QualificationRequirements":[{"ActionsGuarded":"PreviewAndAccept","Comparator":"In","LocaleValues":[{"Country":"AU"},{"Country":"CA"},{"Country":"GB"},{"Country":"NZ"},{"Country":"US"}],"QualificationTypeId":"00000000000000000071","RequiredToPreview":true}],"Question":"<ExternalQuestion xmlns=\\"http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2006-07-14/ExternalQuestion.xsd\\"><ExternalURL>https://dlewis-1bcf3a28-modelevaluator.herokuapp.com/chat_index?task_group_id=model_evaluator_1585015157</ExternalURL><FrameHeight>650</FrameHeight></ExternalQuestion>","Reward":"0.00","Title":"Give a rating to a dialog between two people"}}'
+21:59:18,781 botocore.hooks DEBUG Event needs-retry.mturk.CreateHITWithHITType: calling handler <botocore.retryhandler.RetryHandler object at 0x7f180ac5da90>
+21:59:18,781 botocore.retryhandler DEBUG No retry needed.
+21:59:18,782 botocore.hooks DEBUG Event before-parameter-build.mturk.CreateHITWithHITType: calling handler <function generate_idempotent_uuid at 0x7f180b5a6d90>
+21:59:18,782 botocore.hooks DEBUG Event before-call.mturk.CreateHITWithHITType: calling handler <function inject_api_version_header_if_needed at 0x7f180b5aa7b8>
+21:59:18,782 botocore.endpoint DEBUG Making request for OperationModel(name=CreateHITWithHITType) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'X-Amz-Target': 'MTurkRequesterServiceV20170117.CreateHITWithHITType', 'Content-Type': 'application/x-amz-json-1.1', 'User-Agent': 'Boto3/1.9.247 Python/3.6.1 Linux/4.9.0-11-amd64 Botocore/1.12.247'}, 'body': b'{"HITTypeId": "3MFWWXCWB55MTRGCJLLJVP206DWC6V", "MaxAssignments": 1, "LifetimeInSeconds": 31536000, "Question": "<ExternalQuestion xmlns=\\"http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2006-07-14/ExternalQuestion.xsd\\"><ExternalURL>https://dlewis-1bcf3a28-modelevaluator.herokuapp.com/chat_index?task_group_id=model_evaluator_1585015157</ExternalURL><FrameHeight>650</FrameHeight></ExternalQuestion>"}', 'url': 'https://mturk-requester-sandbox.us-east-1.amazonaws.com/', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x7f180ac5d5c0>, 'has_streaming_input': False, 'auth_type': None}}
+21:59:18,783 botocore.hooks DEBUG Event request-created.mturk.CreateHITWithHITType: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x7f180ac5d550>>
+21:59:18,783 botocore.hooks DEBUG Event choose-signer.mturk.CreateHITWithHITType: calling handler <function set_operation_specific_signer at 0x7f180b5a6c80>
+21:59:18,784 botocore.auth DEBUG Calculating signature using v4 auth.
+21:59:18,784 botocore.auth DEBUG CanonicalRequest:
+POST
+/
+
+content-type:application/x-amz-json-1.1
+host:mturk-requester-sandbox.us-east-1.amazonaws.com
+x-amz-date:20200324T015918Z
+x-amz-target:MTurkRequesterServiceV20170117.CreateHITWithHITType
+
+content-type;host;x-amz-date;x-amz-target
+cb33e79c15b416acd29184a0586310ea881a0ca4ab29101629c307d35d30ef08
+21:59:18,784 botocore.auth DEBUG StringToSign:
+AWS4-HMAC-SHA256
+20200324T015918Z
+20200324/us-east-1/mturk-requester/aws4_request
+227c7b6b87e4cc59e306326678d495eda35090b93dfe12aebed941b5a4b6c033
+21:59:18,784 botocore.auth DEBUG Signature:
+ec26213c42bfc3abb0115f6431eb8c120e82deeda6e9fdd3fe3d34b871b8a169
+21:59:18,785 botocore.endpoint DEBUG Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://mturk-requester-sandbox.us-east-1.amazonaws.com/, headers={'X-Amz-Target': b'MTurkRequesterServiceV20170117.CreateHITWithHITType', 'Content-Type': b'application/x-amz-json-1.1', 'User-Agent': b'Boto3/1.9.247 Python/3.6.1 Linux/4.9.0-11-amd64 Botocore/1.12.247', 'X-Amz-Date': b'20200324T015918Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAS3M5Z7OFELXDLS7S/20200324/us-east-1/mturk-requester/aws4_request, SignedHeaders=content-type;host;x-amz-date;x-amz-target, Signature=ec26213c42bfc3abb0115f6431eb8c120e82deeda6e9fdd3fe3d34b871b8a169', 'Content-Length': '420'}>
+21:59:18,785 urllib3.util.retry DEBUG Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+21:59:18,896 urllib3.connectionpool DEBUG https://mturk-requester-sandbox.us-east-1.amazonaws.com:443 "POST / HTTP/1.1" 200 1216
+21:59:18,897 botocore.parsers DEBUG Response headers: {'x-amzn-RequestId': '15ff74aa-9b96-4002-8ef4-ad637624073a', 'Content-Type': 'application/x-amz-json-1.1', 'Content-Length': '1216', 'Date': 'Tue, 24 Mar 2020 01:59:18 GMT'}
+21:59:18,897 botocore.parsers DEBUG Response body:
+b'{"HIT":{"AssignmentDurationInSeconds":1800,"AutoApprovalDelayInSeconds":432000,"CreationTime":1.585015158E9,"Description":"Give a rating to a dialog between two people. (ID: model_evaluator_1585015157)","Expiration":1.616551158E9,"HITGroupId":"33EWWXEH95W6ZL7BCV4DTSA8EA340B","HITId":"3VW0145YM1AS0HZRM145M9JQ08RMJW","HITReviewStatus":"NotReviewed","HITStatus":"Assignable","HITTypeId":"3MFWWXCWB55MTRGCJLLJVP206DWC6V","Keywords":"chat,dialog,rating","MaxAssignments":1,"NumberOfAssignmentsAvailable":1,"NumberOfAssignmentsCompleted":0,"NumberOfAssignmentsPending":0,"QualificationRequirements":[{"ActionsGuarded":"PreviewAndAccept","Comparator":"In","LocaleValues":[{"Country":"AU"},{"Country":"CA"},{"Country":"GB"},{"Country":"NZ"},{"Country":"US"}],"QualificationTypeId":"00000000000000000071","RequiredToPreview":true}],"Question":"<ExternalQuestion xmlns=\\"http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2006-07-14/ExternalQuestion.xsd\\"><ExternalURL>https://dlewis-1bcf3a28-modelevaluator.herokuapp.com/chat_index?task_group_id=model_evaluator_1585015157</ExternalURL><FrameHeight>650</FrameHeight></ExternalQuestion>","Reward":"0.00","Title":"Give a rating to a dialog between two people"}}'
+21:59:18,898 botocore.hooks DEBUG Event needs-retry.mturk.CreateHITWithHITType: calling handler <botocore.retryhandler.RetryHandler object at 0x7f180ac5da90>
+21:59:18,898 botocore.retryhandler DEBUG No retry needed.
+21:59:18,898 mturk INFO Link to HIT: https://workersandbox.mturk.com/mturk/preview?groupId=3MFWWXCWB55MTRGCJLLJVP206DWC6V
+
+21:59:18,898 mturk INFO Waiting for Turkers to respond... (Please don't close your laptop or put your computer into sleep or standby mode.)
+
+21:59:18,899 mturk INFO Local: Setting up WebSocket...
+21:59:24,128 mturk INFO WebSocket set up!
+21:59:44,749 mturk INFO Expiring all unassigned HITs...
+21:59:44,749 botocore.hooks DEBUG Event before-parameter-build.mturk.UpdateExpirationForHIT: calling handler <function generate_idempotent_uuid at 0x7f180b5a6d90>
+21:59:44,750 botocore.hooks DEBUG Event before-call.mturk.UpdateExpirationForHIT: calling handler <function inject_api_version_header_if_needed at 0x7f180b5aa7b8>
+21:59:44,750 botocore.endpoint DEBUG Making request for OperationModel(name=UpdateExpirationForHIT) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'X-Amz-Target': 'MTurkRequesterServiceV20170117.UpdateExpirationForHIT', 'Content-Type': 'application/x-amz-json-1.1', 'User-Agent': 'Boto3/1.9.247 Python/3.6.1 Linux/4.9.0-11-amd64 Botocore/1.12.247'}, 'body': b'{"HITId": "3SA4EMRVKY0RJEVIS9MRL8YP64WP0O", "ExpireAt": 1420070400}', 'url': 'https://mturk-requester-sandbox.us-east-1.amazonaws.com/', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x7f180ac5d5c0>, 'has_streaming_input': False, 'auth_type': None}}
+21:59:44,751 botocore.hooks DEBUG Event request-created.mturk.UpdateExpirationForHIT: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x7f180ac5d550>>
+21:59:44,751 botocore.hooks DEBUG Event choose-signer.mturk.UpdateExpirationForHIT: calling handler <function set_operation_specific_signer at 0x7f180b5a6c80>
+21:59:44,752 botocore.auth DEBUG Calculating signature using v4 auth.
+21:59:44,752 botocore.auth DEBUG CanonicalRequest:
+POST
+/
+
+content-type:application/x-amz-json-1.1
+host:mturk-requester-sandbox.us-east-1.amazonaws.com
+x-amz-date:20200324T015944Z
+x-amz-target:MTurkRequesterServiceV20170117.UpdateExpirationForHIT
+
+content-type;host;x-amz-date;x-amz-target
+2961ac38831c25f823a07da73267828059824f5b99a8c6d196f31dca8fb4c638
+21:59:44,753 botocore.auth DEBUG StringToSign:
+AWS4-HMAC-SHA256
+20200324T015944Z
+20200324/us-east-1/mturk-requester/aws4_request
+198f1eecd1cff3af7e0a6071b7671621cffdb5b4d45064331ce4cca4343e0788
+21:59:44,753 botocore.auth DEBUG Signature:
+ab0419b103f650e3b50fa981e13f33b30e6a9d571fba1078779e4050c22d0c47
+21:59:44,753 botocore.endpoint DEBUG Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://mturk-requester-sandbox.us-east-1.amazonaws.com/, headers={'X-Amz-Target': b'MTurkRequesterServiceV20170117.UpdateExpirationForHIT', 'Content-Type': b'application/x-amz-json-1.1', 'User-Agent': b'Boto3/1.9.247 Python/3.6.1 Linux/4.9.0-11-amd64 Botocore/1.12.247', 'X-Amz-Date': b'20200324T015944Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAS3M5Z7OFELXDLS7S/20200324/us-east-1/mturk-requester/aws4_request, SignedHeaders=content-type;host;x-amz-date;x-amz-target, Signature=ab0419b103f650e3b50fa981e13f33b30e6a9d571fba1078779e4050c22d0c47', 'Content-Length': '67'}>
+21:59:44,754 urllib3.util.retry DEBUG Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+21:59:44,754 urllib3.connectionpool DEBUG Resetting dropped connection: mturk-requester-sandbox.us-east-1.amazonaws.com
+21:59:45,921 urllib3.connectionpool DEBUG https://mturk-requester-sandbox.us-east-1.amazonaws.com:443 "POST / HTTP/1.1" 200 2
+21:59:45,922 botocore.parsers DEBUG Response headers: {'x-amzn-RequestId': '5aaa74c9-2599-47b7-ab1e-e8d97d96be6c', 'Content-Type': 'application/x-amz-json-1.1', 'Content-Length': '2', 'Date': 'Tue, 24 Mar 2020 01:59:45 GMT'}
+21:59:45,922 botocore.parsers DEBUG Response body:
+b'{}'
+21:59:45,923 botocore.hooks DEBUG Event needs-retry.mturk.UpdateExpirationForHIT: calling handler <botocore.retryhandler.RetryHandler object at 0x7f180ac5da90>
+21:59:45,923 botocore.retryhandler DEBUG No retry needed.
+21:59:45,924 botocore.hooks DEBUG Event before-parameter-build.mturk.UpdateExpirationForHIT: calling handler <function generate_idempotent_uuid at 0x7f180b5a6d90>
+21:59:45,924 botocore.hooks DEBUG Event before-call.mturk.UpdateExpirationForHIT: calling handler <function inject_api_version_header_if_needed at 0x7f180b5aa7b8>
+21:59:45,924 botocore.endpoint DEBUG Making request for OperationModel(name=UpdateExpirationForHIT) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'X-Amz-Target': 'MTurkRequesterServiceV20170117.UpdateExpirationForHIT', 'Content-Type': 'application/x-amz-json-1.1', 'User-Agent': 'Boto3/1.9.247 Python/3.6.1 Linux/4.9.0-11-amd64 Botocore/1.12.247'}, 'body': b'{"HITId": "3VW0145YM1AS0HZRM145M9JQ08RMJW", "ExpireAt": 1420070400}', 'url': 'https://mturk-requester-sandbox.us-east-1.amazonaws.com/', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x7f180ac5d5c0>, 'has_streaming_input': False, 'auth_type': None}}
+21:59:45,925 botocore.hooks DEBUG Event request-created.mturk.UpdateExpirationForHIT: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x7f180ac5d550>>
+21:59:45,925 botocore.hooks DEBUG Event choose-signer.mturk.UpdateExpirationForHIT: calling handler <function set_operation_specific_signer at 0x7f180b5a6c80>
+21:59:45,926 botocore.auth DEBUG Calculating signature using v4 auth.
+21:59:45,926 botocore.auth DEBUG CanonicalRequest:
+POST
+/
+
+content-type:application/x-amz-json-1.1
+host:mturk-requester-sandbox.us-east-1.amazonaws.com
+x-amz-date:20200324T015945Z
+x-amz-target:MTurkRequesterServiceV20170117.UpdateExpirationForHIT
+
+content-type;host;x-amz-date;x-amz-target
+c2f2bae0164bd4ab7a8dfc7b15aab214fc1b83dd03dcffa2cab4fe5685eae18c
+21:59:45,926 botocore.auth DEBUG StringToSign:
+AWS4-HMAC-SHA256
+20200324T015945Z
+20200324/us-east-1/mturk-requester/aws4_request
+5d05283e1c6fb44435bab7ad232b274dc5a99f2b008294083b4a24c75c0d1fc8
+21:59:45,926 botocore.auth DEBUG Signature:
+ce6f522cc2889cccba72c2f26db947d34b81ceefc589892f1cd7a600ea4018da
+21:59:45,927 botocore.endpoint DEBUG Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://mturk-requester-sandbox.us-east-1.amazonaws.com/, headers={'X-Amz-Target': b'MTurkRequesterServiceV20170117.UpdateExpirationForHIT', 'Content-Type': b'application/x-amz-json-1.1', 'User-Agent': b'Boto3/1.9.247 Python/3.6.1 Linux/4.9.0-11-amd64 Botocore/1.12.247', 'X-Amz-Date': b'20200324T015945Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAS3M5Z7OFELXDLS7S/20200324/us-east-1/mturk-requester/aws4_request, SignedHeaders=content-type;host;x-amz-date;x-amz-target, Signature=ce6f522cc2889cccba72c2f26db947d34b81ceefc589892f1cd7a600ea4018da', 'Content-Length': '67'}>
+21:59:45,927 urllib3.util.retry DEBUG Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+21:59:45,993 urllib3.connectionpool DEBUG https://mturk-requester-sandbox.us-east-1.amazonaws.com:443 "POST / HTTP/1.1" 200 2
+21:59:45,994 botocore.parsers DEBUG Response headers: {'x-amzn-RequestId': '63dfd5d7-fe3a-4992-9d47-413312842503', 'Content-Type': 'application/x-amz-json-1.1', 'Content-Length': '2', 'Date': 'Tue, 24 Mar 2020 01:59:45 GMT'}
+21:59:45,994 botocore.parsers DEBUG Response body:
+b'{}'
+21:59:45,995 botocore.hooks DEBUG Event needs-retry.mturk.UpdateExpirationForHIT: calling handler <botocore.retryhandler.RetryHandler object at 0x7f180ac5da90>
+21:59:45,995 botocore.retryhandler DEBUG No retry needed.
+21:59:45,995 mturk INFO Expiring all unassigned HITs...
+21:59:45,996 botocore.hooks DEBUG Event before-parameter-build.mturk.UpdateExpirationForHIT: calling handler <function generate_idempotent_uuid at 0x7f180b5a6d90>
+21:59:45,996 botocore.hooks DEBUG Event before-call.mturk.UpdateExpirationForHIT: calling handler <function inject_api_version_header_if_needed at 0x7f180b5aa7b8>
+21:59:45,996 botocore.endpoint DEBUG Making request for OperationModel(name=UpdateExpirationForHIT) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'X-Amz-Target': 'MTurkRequesterServiceV20170117.UpdateExpirationForHIT', 'Content-Type': 'application/x-amz-json-1.1', 'User-Agent': 'Boto3/1.9.247 Python/3.6.1 Linux/4.9.0-11-amd64 Botocore/1.12.247'}, 'body': b'{"HITId": "3SA4EMRVKY0RJEVIS9MRL8YP64WP0O", "ExpireAt": 1420070400}', 'url': 'https://mturk-requester-sandbox.us-east-1.amazonaws.com/', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x7f180ac5d5c0>, 'has_streaming_input': False, 'auth_type': None}}
+21:59:45,997 botocore.hooks DEBUG Event request-created.mturk.UpdateExpirationForHIT: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x7f180ac5d550>>
+21:59:45,997 botocore.hooks DEBUG Event choose-signer.mturk.UpdateExpirationForHIT: calling handler <function set_operation_specific_signer at 0x7f180b5a6c80>
+21:59:45,998 botocore.auth DEBUG Calculating signature using v4 auth.
+21:59:45,998 botocore.auth DEBUG CanonicalRequest:
+POST
+/
+
+content-type:application/x-amz-json-1.1
+host:mturk-requester-sandbox.us-east-1.amazonaws.com
+x-amz-date:20200324T015945Z
+x-amz-target:MTurkRequesterServiceV20170117.UpdateExpirationForHIT
+
+content-type;host;x-amz-date;x-amz-target
+2961ac38831c25f823a07da73267828059824f5b99a8c6d196f31dca8fb4c638
+21:59:45,998 botocore.auth DEBUG StringToSign:
+AWS4-HMAC-SHA256
+20200324T015945Z
+20200324/us-east-1/mturk-requester/aws4_request
+dd0beaf8f607ecee41cdf3ed2a1e5a1b3f49d6cdbde693b33a9ecc78bd50ef54
+21:59:45,998 botocore.auth DEBUG Signature:
+db2ade0deb9534ca2e05afd23755e26e20ae833bb2aa68c51aa8d6916d8d663f
+21:59:45,999 botocore.endpoint DEBUG Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://mturk-requester-sandbox.us-east-1.amazonaws.com/, headers={'X-Amz-Target': b'MTurkRequesterServiceV20170117.UpdateExpirationForHIT', 'Content-Type': b'application/x-amz-json-1.1', 'User-Agent': b'Boto3/1.9.247 Python/3.6.1 Linux/4.9.0-11-amd64 Botocore/1.12.247', 'X-Amz-Date': b'20200324T015945Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAS3M5Z7OFELXDLS7S/20200324/us-east-1/mturk-requester/aws4_request, SignedHeaders=content-type;host;x-amz-date;x-amz-target, Signature=db2ade0deb9534ca2e05afd23755e26e20ae833bb2aa68c51aa8d6916d8d663f', 'Content-Length': '67'}>
+21:59:45,999 urllib3.util.retry DEBUG Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+21:59:46,34 urllib3.connectionpool DEBUG https://mturk-requester-sandbox.us-east-1.amazonaws.com:443 "POST / HTTP/1.1" 200 2
+21:59:46,35 botocore.parsers DEBUG Response headers: {'x-amzn-RequestId': 'd2df509f-d012-4555-b5cf-ebe96ce68b62', 'Content-Type': 'application/x-amz-json-1.1', 'Content-Length': '2', 'Date': 'Tue, 24 Mar 2020 01:59:45 GMT'}
+21:59:46,35 botocore.parsers DEBUG Response body:
+b'{}'
+21:59:46,36 botocore.hooks DEBUG Event needs-retry.mturk.UpdateExpirationForHIT: calling handler <botocore.retryhandler.RetryHandler object at 0x7f180ac5da90>
+21:59:46,36 botocore.retryhandler DEBUG No retry needed.
+21:59:46,37 botocore.hooks DEBUG Event before-parameter-build.mturk.UpdateExpirationForHIT: calling handler <function generate_idempotent_uuid at 0x7f180b5a6d90>
+21:59:46,37 botocore.hooks DEBUG Event before-call.mturk.UpdateExpirationForHIT: calling handler <function inject_api_version_header_if_needed at 0x7f180b5aa7b8>
+21:59:46,37 botocore.endpoint DEBUG Making request for OperationModel(name=UpdateExpirationForHIT) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'X-Amz-Target': 'MTurkRequesterServiceV20170117.UpdateExpirationForHIT', 'Content-Type': 'application/x-amz-json-1.1', 'User-Agent': 'Boto3/1.9.247 Python/3.6.1 Linux/4.9.0-11-amd64 Botocore/1.12.247'}, 'body': b'{"HITId": "3VW0145YM1AS0HZRM145M9JQ08RMJW", "ExpireAt": 1420070400}', 'url': 'https://mturk-requester-sandbox.us-east-1.amazonaws.com/', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x7f180ac5d5c0>, 'has_streaming_input': False, 'auth_type': None}}
+21:59:46,38 botocore.hooks DEBUG Event request-created.mturk.UpdateExpirationForHIT: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x7f180ac5d550>>
+21:59:46,38 botocore.hooks DEBUG Event choose-signer.mturk.UpdateExpirationForHIT: calling handler <function set_operation_specific_signer at 0x7f180b5a6c80>
+21:59:46,39 botocore.auth DEBUG Calculating signature using v4 auth.
+21:59:46,39 botocore.auth DEBUG CanonicalRequest:
+POST
+/
+
+content-type:application/x-amz-json-1.1
+host:mturk-requester-sandbox.us-east-1.amazonaws.com
+x-amz-date:20200324T015946Z
+x-amz-target:MTurkRequesterServiceV20170117.UpdateExpirationForHIT
+
+content-type;host;x-amz-date;x-amz-target
+c2f2bae0164bd4ab7a8dfc7b15aab214fc1b83dd03dcffa2cab4fe5685eae18c
+21:59:46,39 botocore.auth DEBUG StringToSign:
+AWS4-HMAC-SHA256
+20200324T015946Z
+20200324/us-east-1/mturk-requester/aws4_request
+0087921afbff85b05a20f5a1548fa5c7a24a14eb7c4f1ddd64517be2ab1083ab
+21:59:46,39 botocore.auth DEBUG Signature:
+66be014b462b824b26762d1c167694bc2d5104cc39be76a0f33f0d477ddbf870
+21:59:46,40 botocore.endpoint DEBUG Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://mturk-requester-sandbox.us-east-1.amazonaws.com/, headers={'X-Amz-Target': b'MTurkRequesterServiceV20170117.UpdateExpirationForHIT', 'Content-Type': b'application/x-amz-json-1.1', 'User-Agent': b'Boto3/1.9.247 Python/3.6.1 Linux/4.9.0-11-amd64 Botocore/1.12.247', 'X-Amz-Date': b'20200324T015946Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAS3M5Z7OFELXDLS7S/20200324/us-east-1/mturk-requester/aws4_request, SignedHeaders=content-type;host;x-amz-date;x-amz-target, Signature=66be014b462b824b26762d1c167694bc2d5104cc39be76a0f33f0d477ddbf870', 'Content-Length': '67'}>
+21:59:46,40 urllib3.util.retry DEBUG Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+21:59:46,74 urllib3.connectionpool DEBUG https://mturk-requester-sandbox.us-east-1.amazonaws.com:443 "POST / HTTP/1.1" 200 2
+21:59:46,75 botocore.parsers DEBUG Response headers: {'x-amzn-RequestId': 'c0cf1e92-5ffd-418f-922b-38e98cad8fd9', 'Content-Type': 'application/x-amz-json-1.1', 'Content-Length': '2', 'Date': 'Tue, 24 Mar 2020 01:59:45 GMT'}
+21:59:46,75 botocore.parsers DEBUG Response body:
+b'{}'
+21:59:46,76 botocore.hooks DEBUG Event needs-retry.mturk.UpdateExpirationForHIT: calling handler <botocore.retryhandler.RetryHandler object at 0x7f180ac5da90>
+21:59:46,76 botocore.retryhandler DEBUG No retry needed.
+21:59:46,76 mturk INFO Expiring all unassigned HITs...
+21:59:46,77 botocore.hooks DEBUG Event before-parameter-build.mturk.UpdateExpirationForHIT: calling handler <function generate_idempotent_uuid at 0x7f180b5a6d90>
+21:59:46,77 botocore.hooks DEBUG Event before-call.mturk.UpdateExpirationForHIT: calling handler <function inject_api_version_header_if_needed at 0x7f180b5aa7b8>
+21:59:46,77 botocore.endpoint DEBUG Making request for OperationModel(name=UpdateExpirationForHIT) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'X-Amz-Target': 'MTurkRequesterServiceV20170117.UpdateExpirationForHIT', 'Content-Type': 'application/x-amz-json-1.1', 'User-Agent': 'Boto3/1.9.247 Python/3.6.1 Linux/4.9.0-11-amd64 Botocore/1.12.247'}, 'body': b'{"HITId": "3SA4EMRVKY0RJEVIS9MRL8YP64WP0O", "ExpireAt": 1420070400}', 'url': 'https://mturk-requester-sandbox.us-east-1.amazonaws.com/', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x7f180ac5d5c0>, 'has_streaming_input': False, 'auth_type': None}}
+21:59:46,78 botocore.hooks DEBUG Event request-created.mturk.UpdateExpirationForHIT: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x7f180ac5d550>>
+21:59:46,78 botocore.hooks DEBUG Event choose-signer.mturk.UpdateExpirationForHIT: calling handler <function set_operation_specific_signer at 0x7f180b5a6c80>
+21:59:46,79 botocore.auth DEBUG Calculating signature using v4 auth.
+21:59:46,79 botocore.auth DEBUG CanonicalRequest:
+POST
+/
+
+content-type:application/x-amz-json-1.1
+host:mturk-requester-sandbox.us-east-1.amazonaws.com
+x-amz-date:20200324T015946Z
+x-amz-target:MTurkRequesterServiceV20170117.UpdateExpirationForHIT
+
+content-type;host;x-amz-date;x-amz-target
+2961ac38831c25f823a07da73267828059824f5b99a8c6d196f31dca8fb4c638
+21:59:46,79 botocore.auth DEBUG StringToSign:
+AWS4-HMAC-SHA256
+20200324T015946Z
+20200324/us-east-1/mturk-requester/aws4_request
+9a634a56735b00970971e163d9c14777d419414bf996508a23e8173fdd51254a
+21:59:46,79 botocore.auth DEBUG Signature:
+df8d72fc6f481d33302cd46c23f3d490957e4908d799d9dbef31993ad6896420
+21:59:46,80 botocore.endpoint DEBUG Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://mturk-requester-sandbox.us-east-1.amazonaws.com/, headers={'X-Amz-Target': b'MTurkRequesterServiceV20170117.UpdateExpirationForHIT', 'Content-Type': b'application/x-amz-json-1.1', 'User-Agent': b'Boto3/1.9.247 Python/3.6.1 Linux/4.9.0-11-amd64 Botocore/1.12.247', 'X-Amz-Date': b'20200324T015946Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAS3M5Z7OFELXDLS7S/20200324/us-east-1/mturk-requester/aws4_request, SignedHeaders=content-type;host;x-amz-date;x-amz-target, Signature=df8d72fc6f481d33302cd46c23f3d490957e4908d799d9dbef31993ad6896420', 'Content-Length': '67'}>
+21:59:46,80 urllib3.util.retry DEBUG Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+21:59:46,118 urllib3.connectionpool DEBUG https://mturk-requester-sandbox.us-east-1.amazonaws.com:443 "POST / HTTP/1.1" 200 2
+21:59:46,119 botocore.parsers DEBUG Response headers: {'x-amzn-RequestId': 'fd250497-61db-410c-9900-ddc1982a07b3', 'Content-Type': 'application/x-amz-json-1.1', 'Content-Length': '2', 'Date': 'Tue, 24 Mar 2020 01:59:45 GMT'}
+21:59:46,119 botocore.parsers DEBUG Response body:
+b'{}'
+21:59:46,120 botocore.hooks DEBUG Event needs-retry.mturk.UpdateExpirationForHIT: calling handler <botocore.retryhandler.RetryHandler object at 0x7f180ac5da90>
+21:59:46,120 botocore.retryhandler DEBUG No retry needed.
+21:59:46,121 botocore.hooks DEBUG Event before-parameter-build.mturk.UpdateExpirationForHIT: calling handler <function generate_idempotent_uuid at 0x7f180b5a6d90>
+21:59:46,121 botocore.hooks DEBUG Event before-call.mturk.UpdateExpirationForHIT: calling handler <function inject_api_version_header_if_needed at 0x7f180b5aa7b8>
+21:59:46,121 botocore.endpoint DEBUG Making request for OperationModel(name=UpdateExpirationForHIT) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'X-Amz-Target': 'MTurkRequesterServiceV20170117.UpdateExpirationForHIT', 'Content-Type': 'application/x-amz-json-1.1', 'User-Agent': 'Boto3/1.9.247 Python/3.6.1 Linux/4.9.0-11-amd64 Botocore/1.12.247'}, 'body': b'{"HITId": "3VW0145YM1AS0HZRM145M9JQ08RMJW", "ExpireAt": 1420070400}', 'url': 'https://mturk-requester-sandbox.us-east-1.amazonaws.com/', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x7f180ac5d5c0>, 'has_streaming_input': False, 'auth_type': None}}
+21:59:46,122 botocore.hooks DEBUG Event request-created.mturk.UpdateExpirationForHIT: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x7f180ac5d550>>
+21:59:46,122 botocore.hooks DEBUG Event choose-signer.mturk.UpdateExpirationForHIT: calling handler <function set_operation_specific_signer at 0x7f180b5a6c80>
+21:59:46,123 botocore.auth DEBUG Calculating signature using v4 auth.
+21:59:46,123 botocore.auth DEBUG CanonicalRequest:
+POST
+/
+
+content-type:application/x-amz-json-1.1
+host:mturk-requester-sandbox.us-east-1.amazonaws.com
+x-amz-date:20200324T015946Z
+x-amz-target:MTurkRequesterServiceV20170117.UpdateExpirationForHIT
+
+content-type;host;x-amz-date;x-amz-target
+c2f2bae0164bd4ab7a8dfc7b15aab214fc1b83dd03dcffa2cab4fe5685eae18c
+21:59:46,123 botocore.auth DEBUG StringToSign:
+AWS4-HMAC-SHA256
+20200324T015946Z
+20200324/us-east-1/mturk-requester/aws4_request
+0087921afbff85b05a20f5a1548fa5c7a24a14eb7c4f1ddd64517be2ab1083ab
+21:59:46,123 botocore.auth DEBUG Signature:
+66be014b462b824b26762d1c167694bc2d5104cc39be76a0f33f0d477ddbf870
+21:59:46,124 botocore.endpoint DEBUG Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://mturk-requester-sandbox.us-east-1.amazonaws.com/, headers={'X-Amz-Target': b'MTurkRequesterServiceV20170117.UpdateExpirationForHIT', 'Content-Type': b'application/x-amz-json-1.1', 'User-Agent': b'Boto3/1.9.247 Python/3.6.1 Linux/4.9.0-11-amd64 Botocore/1.12.247', 'X-Amz-Date': b'20200324T015946Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAS3M5Z7OFELXDLS7S/20200324/us-east-1/mturk-requester/aws4_request, SignedHeaders=content-type;host;x-amz-date;x-amz-target, Signature=66be014b462b824b26762d1c167694bc2d5104cc39be76a0f33f0d477ddbf870', 'Content-Length': '67'}>
+21:59:46,124 urllib3.util.retry DEBUG Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+21:59:46,143 urllib3.connectionpool DEBUG https://mturk-requester-sandbox.us-east-1.amazonaws.com:443 "POST / HTTP/1.1" 400 58
+21:59:46,144 botocore.parsers DEBUG Response headers: {'x-amzn-RequestId': '883adbec-4ff1-4863-9b09-727ea0545563', 'Content-Type': 'application/x-amz-json-1.1', 'Content-Length': '58', 'Date': 'Tue, 24 Mar 2020 01:59:45 GMT', 'Connection': 'close'}
+21:59:46,144 botocore.parsers DEBUG Response body:
+b'{"__type":"ThrottlingException","message":"Rate exceeded"}'
+21:59:46,145 botocore.hooks DEBUG Event needs-retry.mturk.UpdateExpirationForHIT: calling handler <botocore.retryhandler.RetryHandler object at 0x7f180ac5da90>
+21:59:46,145 botocore.retryhandler DEBUG retry needed: matching HTTP status and error code seen: 400, ThrottlingException
+21:59:46,145 botocore.retryhandler DEBUG Retry needed, action of: 0.90257746833421
+21:59:46,147 botocore.endpoint DEBUG Response received to retry, sleeping for 0.90257746833421 seconds
+21:59:47,54 botocore.hooks DEBUG Event request-created.mturk.UpdateExpirationForHIT: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x7f180ac5d550>>
+21:59:47,55 botocore.hooks DEBUG Event choose-signer.mturk.UpdateExpirationForHIT: calling handler <function set_operation_specific_signer at 0x7f180b5a6c80>
+21:59:47,55 botocore.auth DEBUG Calculating signature using v4 auth.
+21:59:47,55 botocore.auth DEBUG CanonicalRequest:
+POST
+/
+
+content-type:application/x-amz-json-1.1
+host:mturk-requester-sandbox.us-east-1.amazonaws.com
+x-amz-date:20200324T015947Z
+x-amz-target:MTurkRequesterServiceV20170117.UpdateExpirationForHIT
+
+content-type;host;x-amz-date;x-amz-target
+c2f2bae0164bd4ab7a8dfc7b15aab214fc1b83dd03dcffa2cab4fe5685eae18c
+21:59:47,56 botocore.auth DEBUG StringToSign:
+AWS4-HMAC-SHA256
+20200324T015947Z
+20200324/us-east-1/mturk-requester/aws4_request
+727db653a26e644233db1ac3ee095368bd9f210e78f49de35a3ba39ed6d72de4
+21:59:47,56 botocore.auth DEBUG Signature:
+4faf539e4574b2cf1e90ac50ebc1418c09525e20e8222c4b8bcf8d22b2e07815
+21:59:47,56 botocore.endpoint DEBUG Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://mturk-requester-sandbox.us-east-1.amazonaws.com/, headers={'X-Amz-Target': b'MTurkRequesterServiceV20170117.UpdateExpirationForHIT', 'Content-Type': b'application/x-amz-json-1.1', 'User-Agent': b'Boto3/1.9.247 Python/3.6.1 Linux/4.9.0-11-amd64 Botocore/1.12.247', 'X-Amz-Date': b'20200324T015947Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAS3M5Z7OFELXDLS7S/20200324/us-east-1/mturk-requester/aws4_request, SignedHeaders=content-type;host;x-amz-date;x-amz-target, Signature=4faf539e4574b2cf1e90ac50ebc1418c09525e20e8222c4b8bcf8d22b2e07815', 'Content-Length': '67'}>
+21:59:47,57 urllib3.util.retry DEBUG Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+21:59:47,57 urllib3.connectionpool DEBUG Resetting dropped connection: mturk-requester-sandbox.us-east-1.amazonaws.com
+21:59:47,139 urllib3.connectionpool DEBUG https://mturk-requester-sandbox.us-east-1.amazonaws.com:443 "POST / HTTP/1.1" 200 2
+21:59:47,139 botocore.parsers DEBUG Response headers: {'x-amzn-RequestId': '43ce78d3-0937-400a-9270-278e1d2011a3', 'Content-Type': 'application/x-amz-json-1.1', 'Content-Length': '2', 'Date': 'Tue, 24 Mar 2020 01:59:46 GMT'}
+21:59:47,140 botocore.parsers DEBUG Response body:
+b'{}'
+21:59:47,140 botocore.hooks DEBUG Event needs-retry.mturk.UpdateExpirationForHIT: calling handler <botocore.retryhandler.RetryHandler object at 0x7f180ac5da90>
+21:59:47,141 botocore.retryhandler DEBUG No retry needed.

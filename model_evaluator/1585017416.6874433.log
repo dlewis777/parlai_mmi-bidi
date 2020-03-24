@@ -1,0 +1,2 @@
+22:36:56,706 git.cmd DEBUG Popen(['git', 'rev-parse', 'HEAD'], cwd=/export/a14/dlewis/ParlAI, universal_newlines=False, shell=None, istream=None)
+22:36:56,722 git.cmd DEBUG Popen(['git', 'rev-parse', 'HEAD'], cwd=/export/a14/dlewis/ParlAI/parlai_internal, universal_newlines=False, shell=None, istream=None)
