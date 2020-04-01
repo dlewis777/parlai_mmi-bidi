@@ -23,9 +23,13 @@ python examples/eval_model.py -t personachat --nbest -m transformer/generator -m
 
 Next run makebi.py to tie the nbest list of targets to source responses into a file named newbi.txt
 
-Next run eval on newbi.txt using the P(S|T) model which will make a file named output.txt. This file contains each line scored by the model.
+Next run eval on newbi.txt using the P(S|T) model which will make a file named output.txt. This file contains each line scored by the model. In my case, I just hacked it so you have to replace the default test set with the newbi.txt 
+ie cp newbi.txt valid_self_original.txt
 
-Finally run getscores.py to get a final output with just the new best result.
+To do so set the --score flag, and --location flag with the path to the test set that parlai will use.
+python examples/eval_model.py --score True -t personachat --location [PATH] -mf [MODEL]
+
+Finally run getscores.py to get a final output file final.txt with just the new best result.
 
 Mturk code in model_evaluator folder.
 
