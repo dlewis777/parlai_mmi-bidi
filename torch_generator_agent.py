@@ -359,6 +359,12 @@ class TorchGeneratorAgent(TorchAgent, ABC):
             type='bool',
             default=False,
             help='if true, score model')
+        agent.add_argument(
+            '--location',
+            type=str,
+            default=None,
+            help='full path to test dataset file used by ParlAI for scoring')
+        
         super(TorchGeneratorAgent, cls).add_cmdline_args(argparser)
         return agent
 
@@ -577,6 +583,7 @@ class TorchGeneratorAgent(TorchAgent, ABC):
         model_output = self.model(*self._model_input(batch), ys=batch.label_vec)
         scores, preds, *_ = model_output
         score_view = scores.view(-1, scores.size(-1))
+
         loss = self.criterion(score_view, batch.label_vec.view(-1))
         loss = loss.view(scores.shape[:-1]).sum(dim=1)
         # save loss to metrics
@@ -742,6 +749,7 @@ class TorchGeneratorAgent(TorchAgent, ABC):
                 f1.write(text[0] + '\n')
             f1.write('--\n')
             f1.close()
+
     def eval_step(self, batch):
         """
         Evaluate a single batch of examples.
@@ -759,6 +767,17 @@ class TorchGeneratorAgent(TorchAgent, ABC):
         if batch.label_vec is not None:
             # calculate loss on targets with teacher forcing
             loss, model_output = self.compute_loss(batch, return_output=True)
+            if self.opt['score']:
+                
+                f1 = open(self.opt['location'], 'r')
+                f2 = open('output.txt','a')
+
+                line = f1.readline().strip().split('\t')
+                newline = line[1] + '\t' + line[0] + '\t' + str(loss.item())
+                f2.write(newline + '\n')
+                f1.close()
+                f2.close()
+
             if self.output_token_losses:
                 token_losses = self._construct_token_losses(
                     batch.label_vec, model_output
