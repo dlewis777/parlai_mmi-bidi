@@ -30,6 +30,9 @@ To do so set the --score flag, and --location flag with the path to the test set
 python examples/eval_model.py --score True -t personachat --location [PATH] -mf [MODEL]
 
 Finally run getscores.py to get a final output file final.txt with just the new best result.
+python getscores.py --infile [input]
+
+Final output in final.txt
 
 Mturk code in model_evaluator folder.
 
