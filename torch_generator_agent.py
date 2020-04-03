@@ -371,6 +371,7 @@ class TorchGeneratorAgent(TorchAgent, ABC):
     def __init__(self, opt: Opt, shared=None):
         init_model, is_finetune = self._get_init_model(opt, shared)
         super().__init__(opt, shared)
+        self.number = 1
         self.beam_size = opt.get('beam_size', 1)
         self.beam_min_length = opt.get('beam_min_length', 1)
         self.beam_block_ngram = opt.get('beam_block_ngram', -1)
@@ -768,13 +769,15 @@ class TorchGeneratorAgent(TorchAgent, ABC):
             # calculate loss on targets with teacher forcing
             loss, model_output = self.compute_loss(batch, return_output=True)
             if self.opt['score']:
-                
                 f1 = open(self.opt['location'], 'r')
                 f2 = open('output.txt','a')
-
-                line = f1.readline().strip().split('\t')
-                newline = line[1] + '\t' + line[0] + '\t' + str(loss.item())
-                f2.write(newline + '\n')
+                for i, line in enumerate(f1):
+                    if self.number == i:
+                        line = line.strip().split('\t')
+                        print(line)
+                        newline = line[1] + '\t' + line[0] + '\t' + str(loss.item())
+                        f2.write(newline + '\n')
+                self.number += 1
                 f1.close()
                 f2.close()
 

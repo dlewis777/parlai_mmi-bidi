@@ -12,7 +12,8 @@ for line in f1:
     else:
         line = line.strip()
         tgt = ' '.join(cur.split('\t')[0].split(' ')[1:]).strip()
-        newline = str(counter) + ' ' + line + '\t' + tgt
+        #newline = str(counter) + ' ' + line + '\t' + tgt
+        newline = str(1) + ' ' + line + '\t' + tgt
         f2.write(newline + '\n')
         counter += 1
 
